@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Detail</title>
+    <title>Cat Detail</title>
 </head>
 <body>
-{{kitten}}
+<img src="{{ kitten.cat_pic }}" height="500">
+<h1>{{kitten.cat_name}}</h1>
+<p>{{kitten.cat_name}} is cat. He owns these humans: </p>
+<ul>
+    {%for human in kitten.human_set.all%}
+        <li>{{human.human_name}}</li>
+    {%endfor%}
+</ul>
 </body>
 </html>

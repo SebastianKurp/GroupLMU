@@ -13,5 +13,23 @@
         <li>{{human.human_name}}</li>
     {%endfor%}
 </ul>
+
+{% if error_msg %}
+    <p><b>{{error_msg}}</b></p>
+{% endif %}
+
+<form action="{% url 'cats:favorite' kitten.id%}" method="post">
+    {% csrf_token %}
+    {% for human in kitten.human_set.all%}
+        <input type="radio" id="human{{forloop.counter}}" name="human" value="{{human.id}}"/>
+        <label for="human{{forloop.counter}}">
+            {{human.human_name}}
+            {% if human.is_favorite %}
+               <p><b>&#10084</b></p>
+            {% endif %}
+        </label><br>
+    {% endfor %}
+    <input type="submit" value="Favorite human"/>
+</form>
 </body>
 </html>

@@ -8,7 +8,7 @@
 {% if all_kittens %}
     <ul>
         {% for kitten in all_kittens %}
-        <li><a href="/cats/{{kitten.id}}/">{{kitten.cat_name}}</a></li>
+        <li><a href="{% url 'cats:detail' kitten.id%}">{{kitten.cat_name}}</a></li>
         {% endfor %}
     </ul>
 {% else %}

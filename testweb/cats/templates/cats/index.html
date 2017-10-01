@@ -1,5 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">
+<!--Load path to static files-->
+{% load staticfiles %}
 <head>
     <meta charset="UTF-8">
     <title>Cats</title>
@@ -8,7 +11,7 @@
 {% if all_kittens %}
     <ul>
         {% for kitten in all_kittens %}
-        <li><a href="/cats/{{kitten.id}}/">{{kitten.cat_name}}</a></li>
+        <li><a href="{% url 'cats:detail' kitten.id%}">{{kitten.cat_name}}</a></li>
         {% endfor %}
     </ul>
 {% else %}

@@ -1,4 +1,9 @@
+
 <!DOCTYPE html>
+<!--Load static files-->
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'cats/style.css' %}" />
+<!--static files must be referenced via {% static 'file/path' %} pattern-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,11 +30,14 @@
         <label for="human{{forloop.counter}}">
             {{human.human_name}}
             {% if human.is_favorite %}
-               <p><b>&#10084</b></p>
+               <b>&#10084</b>
             {% endif %}
         </label><br>
     {% endfor %}
     <input type="submit" value="Favorite human"/>
 </form>
+<p id="demo"></p>
+
+<script src="{% static 'cats/test.js' %}"></script>
 </body>
 </html>

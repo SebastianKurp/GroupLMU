@@ -10,12 +10,11 @@
     <title>Cat Detail</title>
 </head>
 <body>
-<img src="{{ kitten.cat_pic }}" height="500">
-<h1>{{kitten.cat_name}}</h1>
-<p>{{kitten.cat_name}} is cat. He owns these humans: </p>
+<h1>{{a_note.title}}</h1>
+<p>{{a_note.title}} is cat. He owns these humans: </p>
 <ul>
-    {%for human in kitten.human_set.all%}
-        <li>{{human.human_name}}</li>
+    {%for mention in a_note.mention_set.all%}
+        <li>{{mention.mention_name}}</li>
     {%endfor%}
 </ul>
 
@@ -23,20 +22,16 @@
     <p><b>{{error_msg}}</b></p>
 {% endif %}
 
-<form action="{% url 'cats:favorite' kitten.id%}" method="post">
+<form action="{% url 'cats:favorite' a_note.id%}" method="post">
     {% csrf_token %}
-    {% for human in kitten.human_set.all%}
-        <input type="radio" id="human{{forloop.counter}}" name="human" value="{{human.id}}"/>
-        <label for="human{{forloop.counter}}">
-            {{human.human_name}}
-            {% if human.is_favorite %}
+    {% for human in a_note.mention_set.all%}
+        <input type="radio" id="mention{{forloop.counter}}" name="mention" value="{{mention.id}}"/>
+        <label for="mention{{forloop.counter}}">
                <b>&#10084</b>
-            {% endif %}
         </label><br>
     {% endfor %}
-    <input type="submit" value="Favorite human"/>
+    <input type="submit" value="Favorite mention"/>
 </form>
-<p id="demo"></p>
 
 <script src="{% static 'cats/test.js' %}"></script>
 </body>

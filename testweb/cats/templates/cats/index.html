@@ -8,10 +8,10 @@
     <title>Cats</title>
 </head>
 <body>
-{% if all_kittens %}
+{% if all_notes %}
     <ul>
-        {% for kitten in all_kittens %}
-        <li><a href="{% url 'cats:detail' kitten.id%}">{{kitten.cat_name}}</a></li>
+        {% for a_note in all_notes %}
+        <li><a href="{% url 'cats:detail' a_note.id%}">{{a_note.title}}</a></li>
         {% endfor %}
     </ul>
 {% else %}

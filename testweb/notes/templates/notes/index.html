@@ -5,7 +5,7 @@
 {% load staticfiles %}
 <head>
     <meta charset="UTF-8">
-    <title>Cats</title>
+    <title>Notes</title>
 </head>
 <body>
 {% if all_notes %}
@@ -15,7 +15,7 @@
         {% endfor %}
     </ul>
 {% else %}
-    <p>You don't have any kittens</p>
+    <p>You don't have any notes</p>
 {% endif %} <!--endif required in django for all if/else blocks-->
 </body>
 </html>

@@ -1,7 +1,8 @@
 from search import search
 
+
 def main():
-	fileContents = ["""
+    fileContents = ["""
 Dear Merrys:--As a subject appropriate to the season, I want to tell you about a New Year's breakfast which I had when I was a little girl. What do you think it was? A slice of dry bread and an apple. This is how it happened, and it is a true story, every word.
 As we came down to breakfast that morning, with very shiny faces and spandy clean aprons, we found father alone in the dining-room.
 "Happy New Year, papa! Where is mother?" we cried.
@@ -25,7 +26,7 @@ Then we fell to work, and in fifteen minutes, it really did seem as if fairies h
 "Das ist gute!" "Oh, nice!" "Der angel--Kinder!" cried the poor things as they ate and smiled and basked in the warm blaze. We had never been called "angel-children" before, and we thought it very charming, especially I who had often been told I was "a regular Sancho." What fun it was! Papa, with a towel for an apron, fed the smallest child; mamma dressed the poor little new-born baby as tenderly as if it had been her own. Betsey gave the mother gruel and tea, and comforted her with assurance of better days for all. Nan, Lu, Beth, and May flew about among the seven children, talking and laughing and trying to understand their funny, broken English. It was a very happy breakfast, though we didn't get any of it; and when we came away, leaving them all so comfortable, and promising to bring clothes and food by and by, I think there were not in all the hungry little girls who gave away their breakfast, and contented themselves with a bit of bread and an apple of New Year's day.
 Testing the search for when, let's see
 	""",
-	"""
+                    """
 Knowing that Mrs. Mallard was afflicted with a heart trouble, great care was taken to break to her as gently as possible the news of her husband's death.
 It was her sister Josephine who told her, in broken sentences; veiled hints that revealed in half concealing. Her husband's friend Richards was there, too, near her. It was he who had been in the newspaper office when intelligence of the railroad disaster was received, with Brently Mallard's name leading the list of "killed." He had only taken the time to assure himself of its truth by a second telegram, and had hastened to forestall any less careful, less tender friend in bearing the sad message.
 She did not hear the story as many women have heard the same, with a paralyzed inability to accept its significance. She wept at once, with sudden, wild abandonment, in her sister's arms. When the storm of grief had spent itself she went away to her room alone. She would have no one follow her.
@@ -47,10 +48,11 @@ She arose at length and opened the door to her sister's importunities. There was
 Someone was opening the front door with a latchkey. It was Brently Mallard who entered, a little travel-stained, composedly carrying his grip-sack and umbrella. He had been far from the scene of the accident, and did not even know there had been one. He stood amazed at Josephine's piercing cry; at Richards' quick motion to screen him from the view of his wife.
 When the doctors came they said she had died of heart disease--of the joy that kills.
 	"""]
-	fileNames = ["Cousin Tribulation's Story", "The Story of An Hour"]
-	searchResults = search(fileContents,fileNames,"when",60)
-	for i in range(len(searchResults)):
-		for j in range(len(searchResults[i])):
-				print searchResults[i][j]
+    fileNames = ["Cousin Tribulation's Story", "The Story of An Hour"]
+    searchResults = search(fileContents, fileNames, "she", 60)
+    for i in range(len(searchResults)):
+        for j in range(len(searchResults[i])):
+            print(searchResults[i][j])
+
 
 main()

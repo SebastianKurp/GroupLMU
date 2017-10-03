@@ -1,17 +1,21 @@
 import os
 
+directoryPath = os.path.dirname(os.path.realpath(__file__))
 print("What would you like to do?")
 choice = input("1.Write file to save locally. \n 2.Write file to save in database. \n 3. Edit file. \n")
 print(choice)
 if choice == '1':
     print("You are storing files locally")
-    path = input("Please enter path in which to store file: ")
+    answer = input("Would you like to store it in " + directoryPath + "?")
 
-    while not os.path.exists(path):
-        print("Path does not exist")
+    if answer.lower() in ['n', 'no']:
         path = input("Please enter path in which to store file: ")
-    os.chdir(path)
-    print(os.getcwd())
+        while not os.path.exists(path):
+            print("Path does not exist")
+            path = input("Please enter path in which to store file: ")
+        os.chdir(path)
+        print(os.getcwd())
+
     title = input("What would you like to name the file? ")+".txt"
     while os.path.isfile('./'+title):
         print("That file alrady exists.")
@@ -41,7 +45,3 @@ elif choice == '3':
             file.write(noteInfo +'\n')
             noteInfo = input("")
         file.close()
-
-
-
-

@@ -1,7 +1,8 @@
 from search import search
 
+
 def main():
-	fileContents = ["""
+    fileContents = ["""
 !cousin
 Dear Merrys:--As a subject appropriate to the season, I want to tell you about a New Year's breakfast which I had when I was a little girl. What do you think it was? A slice of dry bread and an apple. This is how it happened, and it is a true story, every word.
 As we came down to breakfast that morning, with very shiny faces and spandy clean aprons, we found father alone in the dining-room.
@@ -25,8 +26,8 @@ What a poor, bare, miserable place it was, to be sure,--broken windows, no fire,
 Then we fell to work, and in fifteen minutes, it really did seem as if fairies had been at work there. Papa made a splendid fire in the old fireplace and stopped up the broken window with his own hat and coat. Mamma set the shivering children round the fire, and wrapped the poor woman in warm things. Betsey and the rest of us spread the table, and fed the starving little ones.
 "Das ist gute!" "Oh, nice!" "Der angel--Kinder!" cried the poor things as they ate and smiled and basked in the warm blaze. We had never been called "angel-children" before, and we thought it very charming, especially I who had often been told I was "a regular Sancho." What fun it was! Papa, with a towel for an apron, fed the smallest child; mamma dressed the poor little new-born baby as tenderly as if it had been her own. Betsey gave the mother gruel and tea, and comforted her with assurance of better days for all. Nan, Lu, Beth, and May flew about among the seven children, talking and laughing and trying to understand their funny, broken English. It was a very happy breakfast, though we didn't get any of it; and when we came away, leaving them all so comfortable, and promising to bring clothes and food by and by, I think there were not in all the hungry little girls who gave away their breakfast, and contented themselves with a bit of bread and an apple of New Year's day.
 Testing the search for when, let's see
-	""",
-	"""
+    """,
+    """
 !hour
 Knowing that Mrs. Mallard was afflicted with a heart trouble, great care was taken to break to her as gently as possible the news of her husband's death. @mallard
 It was her sister Josephine who told her, in broken sentences; veiled hints that revealed in half concealing. Her husband's friend Richards was there, too, near her. It was he who had been in the newspaper office when intelligence of the railroad disaster was received, with Brently Mallard's name leading the list of "killed." He had only taken the time to assure himself of its truth by a second telegram, and had hastened to forestall any less careful, less tender friend in bearing the sad message. ^time
@@ -48,8 +49,8 @@ Her fancy was running riot along those days ahead of her. Spring days, and summe
 She arose at length and opened the door to her sister's importunities. There was a feverish triumph in her eyes, and she carried herself unwittingly like a goddess of Victory. She clasped her sister's waist, and together they descended the stairs. Richards stood waiting for them at the bottom.
 Someone was opening the front door with a latchkey. It was Brently Mallard who entered, a little travel-stained, composedly carrying his grip-sack and umbrella. He had been far from the scene of the accident, and did not even know there had been one. He stood amazed at Josephine's piercing cry; at Richards' quick motion to screen him from the view of his wife.
 When the doctors came they said she had died of heart disease--of the joy that kills. #medicine
-	""",
-	"""
+    """,
+    """
 !camel
 NOW this is the next tale, and it tells how the Camel got his big hump.
 In the beginning of years, when the world was so new and all, and the Animals were just beginning to work for Man, there was a Camel, and he lived in the middle of a Howling Desert because he did not want to work; and besides, he was a Howler himself. So he ate sticks and thorns and tamarisks and milkweed and prickles, most 'scruciating idle; and when anybody spoke to him he said 'Humph!' Just 'Humph!' and no more.
@@ -82,8 +83,8 @@ And the Camel said 'Humph!' again; but no sooner had he said it than he saw his 
 'How can I,' said the Camel, 'with this humph on my back?'
 'That's made a-purpose,' said the Djinn, 'all because you missed those three days. You will be able to work now for three days without eating, because you can live on your humph; and don't you ever say I never did anything for you. Come out of the Desert and go to the Three, and behave. Humph yourself!'
 And the Camel humphed himself, humph and all, and went away to join the Three. And from that day to this the Camel always wears a humph (we call it 'hump' now, not to hurt his feelings); but he has never yet caught up with the three days that he missed at the beginning of the world, and he has never yet learned how to behave.
-	""",
-	"""
+    """,
+    """
 !time
 The most notable thing about Time is that it is so purely relative. A large amount of reminiscence is, by common consent, conceded to the drowning man; and it is not past belief that one may review an entire courtship while removing one's gloves.
 That is what Trysdale was doing, standing by a table in his bachelor apartments. On the table stood a singular-looking green plant in a red earthen jar. The plant was one of the species of cacti, and was provided with long, tentacular leaves that perpetually swayed with the slightest breeze with a peculiar beckoning motion.
@@ -106,11 +107,11 @@ The voice of the other man in the room, querulously intruding upon his thoughts,
 "Very well. It's a tropical concern. See hundreds of 'em around Punta every day. Here's the name on this tag tied to it. Know any Spanish, Trysdale?"
 "No," said Trysdale, with the bitter wraith of a smile--"Is it Spanish?"
 "Yes. The natives imagine the leaves are reaching out and beckoning to you. They call it by this name--Ventomarme. Name means in English, 'Come and take me.'"
-	"""]
-	fileNames = ["Cousin Tribulation's Story", "The Story of An Hour","How the Camel Got His Hump", "The Cactus"]
-	searchResults = search(fileContents,fileNames,"time",60)
-	for i in range(len(searchResults)):
-		for j in range(len(searchResults[i])):
-				print searchResults[i][j]
+    """]
+    fileNames = ["Cousin Tribulation's Story", "The Story of An Hour"]
+    searchResults = search(fileContents, fileNames, "she", 60)
+    for i in range(len(searchResults)):
+        for j in range(len(searchResults[i])):
+            print(searchResults[i][j])
 
 main()

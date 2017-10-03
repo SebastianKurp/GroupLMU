@@ -1,16 +1,15 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from . import views
 
 app_name = 'notes'
 
 urlpatterns = [
     # /notes/
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.IndexView.as_view(), name='index'),
 
     # /notes/71
-    url(r'^(\d+)/$', views.detail, name='detail'),
-
-    # /notes/favorite
-    url(r'^(?P<a_note_id>[0-9]+)/favorite/$', views.favorite, name='favorite')
+    url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
 
 ]
+
+

@@ -1,1 +1,1 @@
-alert("Javascript working in Django template!");
+console.log("Javascript working in Django template!");

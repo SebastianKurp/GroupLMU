@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
+    <script src="{% static 'notes/test.js' %}"></script>
+    {% block page_title %} {% endblock %}
+</head>
+
+<body>
+{% block note_body %}
+{% endblock %}
+
+
+</body>
+</html>

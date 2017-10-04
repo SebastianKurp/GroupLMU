@@ -1,0 +1,14 @@
+{% block form_title %} {% endblock %}
+
+{% block page %}
+<form class="form" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %} <!--Safety first!-->
+    {% include 'notes/creation_template.html' %}
+    <div class="form-group">
+        <div class="form-column">
+            <button type="submit">Create note</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

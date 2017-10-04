@@ -1,9 +1,14 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 
 class note(models.Model):
     title = models.CharField(max_length=150)
     content = models.CharField(max_length=200)
+
+    def get_absolute_url(self):
+        return reverse('notes:detail', kwargs={'pk': self.pk})
+        #kwargs is keyword argument
 
     def __str__(self):
         return self.title + ", " + self.content

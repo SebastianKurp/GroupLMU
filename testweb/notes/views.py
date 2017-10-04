@@ -1,5 +1,6 @@
 from django.views import generic
 from .models import note
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 class IndexView(generic.ListView):
@@ -15,3 +16,10 @@ class DetailView(generic.DetailView):
     #'note' here is the variable you use to reference an individual note
     #in details.html
     template_name = 'notes/detail.html'
+
+class NoteCreate(CreateView):
+    model = note
+    fields = [
+        'title',
+        'content'
+    ]

@@ -2,10 +2,10 @@
 {% block page_title %}Note Detail{% endblock %}
 {% debug %}
 {% block note_body %}
-    <h1>{{a_note.title}}</h1>
-    <p>{{a_note.title}} is a note. It has these mentions: </p>
+    <h1>{{note.title}}</h1>
+    <p>{{note.title}} is a note. It has these mentions: </p>
     <ul>
-        {%for mention in a_note.mention_set.all%}
+        {%for mention in note.mention_set.all%}
             {{mention.mention_name}}
         {%endfor%}
     </ul>

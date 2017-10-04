@@ -12,4 +12,6 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = note
+    #'note' here is the variable you use to reference an individual note
+    #in details.html
     template_name = 'notes/detail.html'

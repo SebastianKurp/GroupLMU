@@ -14,8 +14,8 @@ class mention(models.Model):
     note_in = models.ForeignKey(note, on_delete=models.CASCADE)
    # is_favorite = models.BooleanField(default=False)
 
-    # if the cat is deleted, the human is unimportant
+    # if the not is deleted, the mention is unimportant
     # so delete it also
     def __str__(self):
-        return str(self.mention_name) + " is owned by a cat."
-        # cat_overlord returns an adorable_kitten object
+        return str(self.mention_name)
+        # note_in returns an note object

@@ -11,6 +11,9 @@ def charsToSpaces(s):
 
 def formatLine(l, maxLen, index, term, lineNumber):
     #formats the output for ease of us in front end
+    if len(term) > maxLen:
+    	print("ERROR: max output length shorter than term.")
+    	return None
     if len(l) <= maxLen:
         #if the length of the line is less than maxLength, you don't need to do anything
         line = l

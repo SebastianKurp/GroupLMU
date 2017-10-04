@@ -38,7 +38,8 @@ def search(fileContents, fileNames, term, maxOutputLen):
 ### View sample input in 'dummy_test.py'
 
 ### Format of search hits:
-#	[STRING of text surrounding the term, the line number, index of first letter of term in STRING, index of last letter of term in STRING]
+#	[STRING of text surrounding the term, the line number, index of first letter of term in STRING, 
+#   index of last letter of term in STRING]
 #		first and last letter indexes to help with highlighting the word
 
 ### SAMPLE OUTPUT: search for 'when', with a max output length of 60

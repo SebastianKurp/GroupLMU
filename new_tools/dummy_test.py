@@ -119,11 +119,11 @@ The voice of the other man in the room, querulously intruding upon his thoughts,
 
 
     searchResults = search(fileContents, fileNames, "when", 60)
-    mentions = reportBySymbol(fileContents, fileNames, '@', 60)
-    keywords = reportBySymbol(fileContents, fileNames, '#', 60)
+    mentionsByNote = reportBySymbol(fileContents, fileNames, '@', 60, style = 'by note')
+    keywordsBySymbol = reportBySymbol(fileContents, fileNames, '#', style = 'by symbol')
 
     showResult('search results for [when]:',searchResults)
-    showResult('mentions found:',mentions)
-    showResult('keywords found:',keywords)
+    showResult('mentions found (by note):',mentionsByNote)
+    showResult('keywords found (by symbol):',keywordsBySymbol)
 
 main()

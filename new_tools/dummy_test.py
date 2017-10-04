@@ -1,5 +1,11 @@
-from search import search
+from search import *
+from report_by_symbol import *
 
+def showResult(info,result):
+    print('\n>>>> ' + info + ' <<<<\n')
+    for i in range(len(result)):
+        for j in range(len(result[i])):
+            print(result[i][j])
 
 def main():
     fileContents = ["""
@@ -8,7 +14,7 @@ Dear Merrys:--As a subject appropriate to the season, I want to tell you about a
 As we came down to breakfast that morning, with very shiny faces and spandy clean aprons, we found father alone in the dining-room.
 "Happy New Year, papa! Where is mother?" we cried.
 "A little boy came begging and said they were starving at home, so your mother went to see and--ah, here she is."
-As papa spoke, in came mamma, looking very cold, rather sad, and very much excited.
+As papa spoke, in came mamma, looking very cold, rather sad, and very much excited. #excited
 "Children, don't begin till you hear what I have to say," she cried; and we sat staring at her, with the breakfast untouched before us.
 "Not far away from here, lies a poor woman with a little new-born baby. Six children are huddled into one bed to keep from freezing, for they have no fire. There is nothing to eat over there; and the oldest boy came here to tell me they were starving this bitter cold day. My little girls, will you give them your breakfast, as a New Year's gift?"
 We sat silent a minute, and looked at the nice, hot porridge, creamy milk, and good bread and butter; for we were brought up like English children, and never drank tea or coffee, or ate anything but porridge for our breakfast.
@@ -42,7 +48,7 @@ Now her bosom rose and fell tumultuously. She was beginning to recognize this th
 She did not stop to ask if it were or were not a monstrous joy that held her. A clear and exalted perception enabled her to dismiss the suggestion as trivial. She knew that she would weep again when she saw the kind, tender hands folded in death; the face that had never looked save with love upon her, fixed and gray and dead. But she saw beyond that bitter moment a long procession of years to come that would belong to her absolutely. And she opened and spread her arms out to them in welcome.
 There would be no one to live for during those coming years; she would live for herself. There would be no powerful will bending hers in that blind persistence with which men and women believe they have a right to impose a private will upon a fellow-creature. A kind intention or a cruel intention made the act seem no less a crime as she looked upon it in that brief moment of illumination.
 And yet she had loved him--sometimes. Often she had not. What did it matter! What could love, the unsolved mystery, count for in the face of this possession of self-assertion which she suddenly recognized as the strongest impulse of her being!
-"Free! Body and soul free!" she kept whispering.
+"Free! Body and soul free!" she kept whispering. #quiet
 Josephine was kneeling before the closed door with her lips to the keyhole, imploring for admission. "Louise, open the door! I beg; open the door--you will make yourself ill. What are you doing, Louise? For heaven's sake open the door."
 "Go away. I am not making myself ill." No; she was drinking in a very elixir of life through that open window.
 Her fancy was running riot along those days ahead of her. Spring days, and summer days, and all sorts of days that would be her own. She breathed a quick prayer that life might be long. It was only yesterday she had thought with a shudder that life might be long.
@@ -70,7 +76,7 @@ Presently there came along the Djinn in charge of All Deserts, rolling in a clou
 'He says "Humph!"' said the Dog; 'and he won't fetch and carry.'
 'Does he say anything else?'
 'Only "Humph!"; and he won't plough,' said the Ox.
-'Very good,' said the Djinn. 'I'll humph him if you will kindly wait a minute.'
+'Very good,' said the Djinn. 'I'll humph him if you will kindly wait a minute.' #excited
 The Djinn rolled himself up in his dust-cloak, and took a bearing across the desert, and found the Camel most 'scruciatingly idle, looking at his own reflection in a pool of water.
 'My long and bubbling friend,' said the Djinn, 'what's this I hear of your doing no work, with the world so new-and-all?'
 'Humph!' said the Camel.
@@ -89,7 +95,7 @@ And the Camel humphed himself, humph and all, and went away to join the Three. A
 The most notable thing about Time is that it is so purely relative. A large amount of reminiscence is, by common consent, conceded to the drowning man; and it is not past belief that one may review an entire courtship while removing one's gloves.
 That is what Trysdale was doing, standing by a table in his bachelor apartments. On the table stood a singular-looking green plant in a red earthen jar. The plant was one of the species of cacti, and was provided with long, tentacular leaves that perpetually swayed with the slightest breeze with a peculiar beckoning motion.
 Trysdale's friend, the brother of the bride, stood at a sideboard complaining at being allowed to drink alone. Both men were in evening dress. White favors like stars upon their coats shone through the gloom of the apartment.
-As he slowly unbuttoned his gloves, there passed through Trysdale's mind a swift, scarifying retrospect of the last few hours. It seemed that in his nostrils was still the scent of the flowers that had been banked in odorous masses about the church, and in his ears the lowpitched hum of a thousand well-bred voices, the rustle of crisp garments, and, most insistently recurring, the drawling words of the minister irrevocably binding her to another.
+As he slowly unbuttoned his gloves, there passed through Trysdale's mind a swift @trysdale, scarifying retrospect of the last few hours. It seemed that in his nostrils was still the scent of the flowers that had been banked in odorous masses about the church, and in his ears the lowpitched hum of a thousand well-bred voices, the rustle of crisp garments, and, most insistently recurring, the drawling words of the minister irrevocably binding her to another.
 From this last hopeless point of view he still strove, as if it had become a habit of his mind, to reach some conjecture as to why and how he had lost her. Shaken rudely by the uncompromising fact, he had suddenly found himself confronted by a thing he had never before faced --his own innermost, unmitigated, arid unbedecked self. He saw all the garbs of pretence and egoism that he had worn now turn to rags of folly. He shuddered at the thought that to others, before now, the garments of his soul must have appeared sorry and threadbare. Vanity and conceit? These were the joints in his armor. And how free from either she had always been--But why--
 As she had slowly moved up the aisle toward the altar he had felt an unworthy, sullen exultation that had served to support him. He had told himself that her paleness was from thoughts of another than the man to whom she was about to give herself. But even that poor consolation had been wrenched from him. For, when he saw that swift, limpid, upward look that she gave the man when he took her hand, he knew himself to be forgotten. Once that same look had been raised to him, and he had gauged its meaning. Indeed, his conceit had crumbled; its last prop was gone. Why had it ended thus? There had been no quarrel between them, nothing--
 For the thousandth time he remarshalled in his mind the events of those last few days before the tide had so suddenly turned.
@@ -101,17 +107,23 @@ But, alas! the incense of her admiration had been so sweet and flattering. He al
 How glad, how shy, how tremulous she was! How she fluttered like a snared bird when he laid his mightiness at her feet! He could have sworn, and he could swear now, that unmistakable consent was in her eyes, but, coyly, she would give him no direct answer. "I will send you my answer to-morrow," she said; and he, the indulgent, confident victor, smilingly granted the delay. The next day he waited, impatient, in his rooms for the word. At noon her groom came to the door and left the strange cactus in the red earthen jar. There was no note, no message, merely a tag upon the plant bearing a barbarous foreign or botanical name. He waited until night, but her answer did not come. His large pride and hurt vanity kept him from seeking her. Two evenings later they met at a dinner. Their greetings were conventional, but she looked at him, breathless, wondering, eager. He was courteous, adamant, waiting her explanation. With womanly swiftness she took her cue from his manner, and turned to snow and ice. Thus, and wider from this on, they had drifted apart. Where was his fault? Who had been to blame? Humbled now, he sought the answer amid the ruins of his self-conceit. If--
 The voice of the other man in the room, querulously intruding upon his thoughts, aroused him.
 "I say, Trysdale, what the deuce is the matter with you? You look unhappy as if you yourself had been married instead of having acted merely as an accomplice. Look at me, another accessory, come two thousand miles on a garlicky, cockroachy banana steamer all the way from South America to connive at the sacrifice--please to observe how lightly my guilt rests upon my shoulders. Only little sister I had, too, and now she's gone. Come now! take something to ease your conscience."
-"I don't drink just now, thanks," said Trysdale. @trysdale
+"I don't drink just now, thanks," said Trysdale.
 "Your brandy," resumed the other, coming over and joining him, "is abominable. Run down to see me some time at Punta Redonda, and try some of our stuff that old Garcia smuggles in. It's worth the, trip. Hallo! here's an old acquaintance. Wherever did you rake up this cactus, Trysdale?"
 "A present," said Trysdale, "from a friend. Know the species?"
 "Very well. It's a tropical concern. See hundreds of 'em around Punta every day. Here's the name on this tag tied to it. Know any Spanish, Trysdale?"
 "No," said Trysdale, with the bitter wraith of a smile--"Is it Spanish?"
 "Yes. The natives imagine the leaves are reaching out and beckoning to you. They call it by this name--Ventomarme. Name means in English, 'Come and take me.'"
     """]
-    fileNames = ["Cousin Tribulation's Story", "The Story of An Hour"]
-    searchResults = search(fileContents, fileNames, "she", 60)
-    for i in range(len(searchResults)):
-        for j in range(len(searchResults[i])):
-            print(searchResults[i][j])
+    fileNames = ["Cousin Tribulation's Story", "The Story of An Hour", "How the Camel Got His Hump", "The Cactus"]
+
+
+
+    searchResults = search(fileContents, fileNames, "when", 60)
+    mentions = reportBySymbol(fileContents, fileNames, '@', 60)
+    keywords = reportBySymbol(fileContents, fileNames, '#', 60)
+
+    showResult('search results for [when]:',searchResults)
+    showResult('mentions found:',mentions)
+    showResult('keywords found:',keywords)
 
 main()

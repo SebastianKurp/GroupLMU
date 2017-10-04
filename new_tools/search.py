@@ -1,13 +1,4 @@
-def charsToSpaces(s):
-    output = ''
-    chars = '!"#$%&()*+,-./:;<=>?@[\\]^_`{|}~'
-    for i in range(len(s)):
-        if not s[i] in chars:
-            output += s[i]
-        else:
-            output += ' '
-    return output
-
+from formatting import *
 
 def search(fileContents, fileNames, term, maxOutputLen):
     # file contents is a list of strings, each of which is the entire body of a note/file.
@@ -34,22 +25,9 @@ def search(fileContents, fileNames, term, maxOutputLen):
                 w += len(words[k]) + 1
             for k in range(len(found)):
                 # for each location where the word was found, format the output
-                if len(lines[j]) <= maxOutputLen:
-                    line = lines[j]
-                    loc = found[k]
-                elif found[k] + len(term) + (maxOutputLen - len(term)) / 2 > len(lines[j]):
-                    line = '... ' + lines[j][-(maxOutputLen - 1):]
-                    loc = maxOutputLen - (len(lines[j]) - found[k] + 1) + 4
-                elif found[k] - (maxOutputLen - len(term)) / 2 < 0:
-                    line = lines[j][0:maxOutputLen] + ' ...'
-                    loc = found[k]
-                else:
-                    line = '... ' + lines[j][found[k] - (maxOutputLen - len(term)) // 2:found[k] + len(term) + (
-                                                                                                              maxOutputLen - len(
-                                                                                                                  term)) // 2] + ' ...'
-                    loc = (maxOutputLen + 8 - len(term)) / 2
-                currFile.append([line, j, loc, loc + len(term) - 1])
-            # append the formatted output to the current file's result
+                line = formatLine(lines[j], maxOutputLen, found[k], term, j)
+                currFile.append(line)
+                # append the formatted output to the current file's result
         if len(currFile) > 1:
             # if a word has been found in this file
             output.append(currFile)

@@ -18,6 +18,9 @@ urlpatterns = [
 
     # /notes/note/[primary key]/delete
     url(r'note/(?P<pk>[0-9]+)/delete/$', views.NoteDelete.as_view(), name='note-delete'),
+
+    # /notes/
+    url(r'^signup/$', views.UserFormView.as_view(), name='signup'),
 ]
 
 

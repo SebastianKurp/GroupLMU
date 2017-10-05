@@ -36,8 +36,6 @@ def reportBySymbol(fileContents, fileNames, symbol, maxOutputLen = 60, style = '
             output.append(currFile)
             # add this file's results to the final output
     if style == 'by symbol':
-        print(output)
-        print('#triggered')
         dSymbol = {}
         for i in range(len(output)):
             for j in range(1,len(output[i])):

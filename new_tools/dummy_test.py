@@ -127,3 +127,9 @@ The voice of the other man in the room, querulously intruding upon his thoughts,
     showResult('keywords found (by symbol):',keywordsBySymbol)
 
 main()
+
+#need to add
+#   the max len should still matter for notes with really long titles when sorting by symbol
+#   need to explain that when sorting by symbol, the front end can let the user click on a note title, 
+#       which will trigger the search function just for that note they clicked on,
+#       so they get that nice report that the search function gives.

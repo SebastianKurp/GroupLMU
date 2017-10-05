@@ -1,11 +1,26 @@
 {% extends 'notes/base.html' %}
+{% load staticfiles %}
 <!--Load path to static files-->
 
 {% block note_body %}
     {% if all_notes %}
     <ul>
-        {% for a_note in all_notes %}
-        <li><a href="{% url 'notes:detail' a_note.id%}">{{a_note.title}}</a></li>
+        {% for note in all_notes %}
+        <li><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
+            <form action="{% url 'notes:note-delete' note.id %}" method="post" style="display: inline;">
+                {% csrf_token %} <!--use everytime using form-->
+                <input type="hidden" name="note_id" value="{{note.id}}"/>
+                <button type="submit">
+                <img src="{% static 'notes/images/trashicon.png' %}" width="45" />
+                </button>
+            </form>
+            <form action="{% url 'notes:note-update' note.id %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <input type="hidden" name="note_id" value="{{note.id}}"/>
+                <button type="submit">
+                <img src="{% static 'notes/images/editicon.png' %}" width="45" />
+                </button>
+        </li>
         {% endfor %}
     </ul>
     {% else %}

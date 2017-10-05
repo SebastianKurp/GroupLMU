@@ -1,0 +1,12 @@
+{% extends 'notes/base.html' %}
+
+{% block body %}
+<h1>Login to your account</h1>
+<div class="login-form">
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}} <!--'As paragraph django method-->
+        <button type="submit">Login</button>
+    </form>
+</div>
+{% endblock %}

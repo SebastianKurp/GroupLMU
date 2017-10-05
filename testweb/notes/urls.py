@@ -1,5 +1,6 @@
 from django.conf.urls import url, include
 from . import views
+from django.contrib.auth.views import login
 
 app_name = 'notes'
 
@@ -19,8 +20,11 @@ urlpatterns = [
     # /notes/note/[primary key]/delete
     url(r'note/(?P<pk>[0-9]+)/delete/$', views.NoteDelete.as_view(), name='note-delete'),
 
-    # /notes/
+    # /notes/signup
     url(r'^signup/$', views.UserFormView.as_view(), name='signup'),
+
+    # /notes/login
+    url(r'^login/$', login, {'template_name':'notes/login.html'})
 ]
 
 

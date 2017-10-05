@@ -2,7 +2,10 @@
 {% load staticfiles %}
 <!--Load path to static files-->
 
-{% block note_body %}
+{% block body %}
+<a href="{% url 'notes:note-create' %}">
+    <span class="add_note"> Create Note</span>
+</a>
     {% if all_notes %}
     <ul>
         {% for note in all_notes %}

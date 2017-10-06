@@ -14,14 +14,14 @@
                 {% csrf_token %} <!--use everytime using form-->
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
                 <button type="submit">
-                <img src="{% static 'notes/images/trashicon.png' %}" width="45" />
+                <img src="{% static 'notes/images/delete.png' %}" width="45" />
                 </button>
             </form>
             <form action="{% url 'notes:note-update' note.id %}" method="post" style="display: inline;">
                 {% csrf_token %}
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
                 <button type="submit">
-                <img src="{% static 'notes/images/editicon.png' %}" width="45" />
+                <img src="{% static 'notes/images/edit.png' %}" width="45" />
                 </button>
         </li>
         {% endfor %}

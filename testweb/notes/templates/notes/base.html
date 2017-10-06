@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     {% load staticfiles %}
+    <img src="{% static 'images/background.png' %}" id="background"/>
     <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
     <script src="{% static 'notes/test.js' %}"></script>
     <script src="{% static 'notes/highlight.js' %}"></script>
@@ -10,10 +11,8 @@
 </head>
 
 <body>
-<a href="{% url 'notes:note-create' %}">
-    <span class="add_note"> Create Note</span>
-</a>
-{% block note_body %}
+
+{% block body %}
 {% endblock %}
 
 

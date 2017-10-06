@@ -1,5 +1,6 @@
-{% block form_title %} <h3>Create a note</h3> {% endblock %}
-
+{% load staticfiles %}
+{% block form_title %} {% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
 {% for field in form %}
 <div class="form-group">
 <div class="form-column">

@@ -2,7 +2,10 @@
 {% load staticfiles %}
 <!--Load path to static files-->
 
-{% block note_body %}
+{% block body %}
+<a href="{% url 'notes:note-create' %}">
+    <span class="add_note"> Create Note</span>
+</a>
     {% if all_notes %}
     <ul>
         {% for note in all_notes %}
@@ -11,14 +14,14 @@
                 {% csrf_token %} <!--use everytime using form-->
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
                 <button type="submit">
-                <img src="{% static 'notes/images/trashicon.png' %}" width="45" />
+                <img src="{% static 'notes/images/delete.png' %}" width="45" />
                 </button>
             </form>
             <form action="{% url 'notes:note-update' note.id %}" method="post" style="display: inline;">
                 {% csrf_token %}
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
                 <button type="submit">
-                <img src="{% static 'notes/images/editicon.png' %}" width="45" />
+                <img src="{% static 'notes/images/edit.png' %}" width="45" />
                 </button>
         </li>
         {% endfor %}

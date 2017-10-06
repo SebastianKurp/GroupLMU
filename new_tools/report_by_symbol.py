@@ -39,13 +39,11 @@ def reportBySymbol(fileContents, fileNames, symbol, maxOutputLen = 60, style = '
         dSymbol = {}
         for i in range(len(output)):
             for j in range(1,len(output[i])):
-                word = output[i][j][0][output[i][j][2]:output[i][j][3]+1]
-                print(word)
+                word = output[i][j][0]
                 if word in dSymbol.keys():
                     dSymbol[word].append(output[i][0])
                 else:
                     dSymbol[word] = [output[i][0]]
-        print(dSymbol)
         tempOutput = []
         for key, value in dSymbol.items():
             tempOutput.append([key, list(set(value))])

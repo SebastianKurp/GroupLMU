@@ -1,5 +1,6 @@
 from search import *
 from report_by_symbol import *
+from topological_sort import *
 
 def showResult(info,result):
     print('\n>>>> ' + info + ' <<<<\n')
@@ -121,10 +122,13 @@ The voice of the other man in the room, querulously intruding upon his thoughts,
     searchResults = search(fileContents, fileNames, "when", 60)
     mentionsByNote = reportBySymbol(fileContents, fileNames, '@', 60, style = 'by note')
     keywordsBySymbol = reportBySymbol(fileContents, fileNames, '#', style = 'by symbol')
+    sort = topologicalSort(fileContents, fileNames)
+
 
     showResult('search results for [when]:',searchResults)
     showResult('mentions found (by note):',mentionsByNote)
     showResult('keywords found (by symbol):',keywordsBySymbol)
+    showResult('Topological sort:',sort)
 
 main()
 

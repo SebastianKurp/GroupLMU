@@ -20,7 +20,7 @@
     <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
-                <li class="menu-text"><img class="logo" src="{%static images/evernote-logo.png %"></li>
+                <li class="menu-text"><img class="logo" src="{%static 'notes/images/evernote-logo.png' %}"></li>
             </ul>
         </div>
         <div class="top-bar-center">
@@ -36,7 +36,7 @@
                 </button>
         </div>
         <div class="profile">
-            <img class="profile-avatar__image" ng-src="{%static images/evernote-logo.png %">
+            <img class="profile-avatar__image" src="{% static 'notes/images/evernote-logo.png' %}">
             <span class="profile-avatar_name ">User</span>
         </div>
     </div>

@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^signup/$', views.UserFormView.as_view(), name='signup'),
 
     # /notes/login
-    url(r'^login/$', login, {'template_name':'notes/login.html'})
+    url(r'^login/$', login, {'template_name': 'notes/login.html'})
 ]
 
 

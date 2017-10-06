@@ -49,6 +49,6 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-#PyCharm stuff
+# PyCharm files
 workspace.xml
 tasks.xml

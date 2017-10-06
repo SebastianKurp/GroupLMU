@@ -1,20 +1,62 @@
-<!DOCTYPE html>
+<!DOCTYPE html> {% load staticfiles %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    {% load staticfiles %}
-    <img src="{% static 'images/background.png' %}" id="background"/>
+    <link rel="stylesheet" href="{% static 'notes/foundation.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
-    <script src="{% static 'notes/test.js' %}"></script>
     <script src="{% static 'notes/highlight.js' %}"></script>
-  <title> {% block page_title %} {% endblock %} </title>
+    {% block page_title %} Main-Page Testing {% endblock %}
+
 </head>
 
 <body>
+    {% block note_body %}
+    <!-- <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+            <div class="title-bar-title">Menu</div>
+        </div> -->
 
-{% block body %}
-{% endblock %}
+    <div class="top-bar" id="responsive-menu">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text"><img class="logo" src="{%static images/evernote-logo.png %"></li>
+            </ul>
+        </div>
+        <div class="top-bar-center">
+            <ul class="menu">
+                <!-- <input type="search" name="search" placeholder="Search.." class="animated-search-form"> -->
+                <li><input type="search" placeholder="Search"></li>
+                <li><button type="button" class="button">Search</button></li>
+            </ul>
+        </div>
+        <div class="Alerts_button">
+            <button class="updates-button">
+                <i class="fa fa-bell"></i>
+                </button>
+        </div>
+        <div class="profile">
+            <img class="profile-avatar__image" ng-src="{%static images/evernote-logo.png %">
+            <span class="profile-avatar_name ">User</span>
+        </div>
+    </div>
+    <div class="left-nav ">
+        <ul class="side-nav " role="navigation ">
+            <li class="Click "><a href="# ">Option1</a></li>
+            <li class="divider "></li>
+            <li class="Click "><a href="# ">Option2</a></li>
+            <li class="divider "></li>
+            <li class="Click "><a href="# ">Option3</a></li>
+            <li class="divider "></li>
+            <li class="Click "><a href="# ">Option4</a></li>
+            <li class="divider "></li>
+            <li class="Click "><a href="# ">Option5</a></li>
+        </ul>
+    </div>
 
 
+    {% endblock %}
 </body>
 </html>
+

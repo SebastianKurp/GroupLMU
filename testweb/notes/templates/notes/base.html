@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    {% block note_body %}
+    {% block nav_bars %}
     <!-- <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
             <div class="title-bar-title">Menu</div>
@@ -54,9 +54,11 @@
             <li class="Click "><a href="# ">Option5</a></li>
         </ul>
     </div>
-
-
     {% endblock %}
+    <div class="notes">
+    {% block note_body %}
+    {% endblock %}
+        </div>
 </body>
 </html>
 

@@ -1,8 +1,9 @@
-{% extends 'notes/base.html' %}
+{% include 'notes/base.html' %}
 {% load staticfiles %}
 <!--Load path to static files-->
-
-{% block body %}
+{% block nav_bars %}
+{% endblock %}
+{% block note_body %}
 <a href="{% url 'notes:note-create' %}">
     <span class="add_note"> Create Note</span>
 </a>
@@ -23,6 +24,7 @@
                 <button type="submit">
                 <img src="{% static 'notes/images/edit.png' %}" width="45" />
                 </button>
+            </form>
         </li>
         {% endfor %}
     </ul>

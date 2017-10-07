@@ -3,6 +3,10 @@
     background: white url('images/white_blurry_bg.jpg');
 } */
 
+/* Note listing */
+.notes {
+align: relative;
+}
 
 /*Nav bar stuff*/
 
@@ -24,6 +28,7 @@
 
 .top-bar {
     position: relative;
+    margin: auto;
 }
 
 .top-bar,
@@ -49,9 +54,9 @@
 } */
 
 .top-bar input {
-    max-width: 1200px;
+    max-width: auto;
     position: relative;
-    right: 1800px
+    right: auto;
 }
 
 [type='search'] {
@@ -68,29 +73,29 @@
 }
 
 .button {
-    height: 40px;
-    width: 200px;
+    height: 2.5em;
+    width: 9em;
     background-color: #219d46;
 }
 
 .profile-avatar__image {
-    width: 70pxs;
-    height: 60px;
-    border-radius: 30px;
+    width: 4em;
+    height: 2.5em;
+    border-radius: 2em;
 }
 
 .profile-avatar_name {
     color: white;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .updates-button {
-    height: 60px;
-    width: 60px;
+    height: 3em;
+    width: 3em;
     background-color: #c2c2c2;
     border: none;
-    padding: 10px;
-    border-radius: 30px;
+    padding: 1em;
+    border-radius: 11em;
     outline: 0;
     position: relative;
     cursor: pointer;
@@ -106,10 +111,10 @@
 
 .left-nav {
     background-color: #131d28;
-    width: 400px;
+    width: 10em;
     text-align: center;
-    height: 1500px;
-    border-spacing: 10px;
+    height: 50em;
+    border-spacing: 3em;
 }
 
 .divider {
@@ -120,15 +125,14 @@
 
 .Click,
 a {
-    font-size: 50px;
+    font-size: 1.25em;
     color: #219d46;
-    margin-bottom: 100px;
+    margin-bottom: auto;
     border-color: white;
 }
 
 .Click {
     /* border-style: solid; */
     /* border-color: #ff0000 #0000ff; */
-    padding: 50px;
->>>>>>> 0e2fd0c60c8eb833ecefa4a1a39d2a22c2ac5bd9
+    padding: 1em;
 }

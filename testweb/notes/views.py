@@ -1,9 +1,10 @@
+from django.template import RequestContext
 from django.views import generic
 from .models import note
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import authenticate, login
 from .forms import UserForm
 
@@ -21,6 +22,12 @@ class DetailView(generic.DetailView):
     # 'note' here is the variable you use to reference an individual note
     # in details.html
     template_name = 'notes/detail.html'
+
+
+def page_not_found(request):
+    response = render_to_response('404.html', context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
 
 
 class NoteCreate(CreateView):

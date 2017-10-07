@@ -3,6 +3,7 @@ from . import views
 from django.contrib.auth.views import login
 
 app_name = 'notes'
+handler404 = 'views.page_not_found'
 
 urlpatterns = [
     # /notes/

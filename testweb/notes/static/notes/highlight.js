@@ -8,10 +8,11 @@ function getText(){
 
     textRange = window.getSelection().getRangeAt(0);//where to put the styling
 
-    highlight(textRange);
+
     var length = text.length;
     if(length > 0 && text !=""){
         console.log(text);
+        highlight(textRange);
         //unHighlight(); //currently don't know how to implement this
         deselect();
     }

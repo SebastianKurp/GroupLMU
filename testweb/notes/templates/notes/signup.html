@@ -1,15 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
 
-<h3>Sign Up</h3>
+<Head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/signup.css' %}" />
+
+</Head>
+
 
 {% block page %}
-<form class="form" action="" method="post" enctype="multipart/form-data">
-    {% csrf_token %} <!--Safety first!-->
-    {% include 'notes/creation_template.html' %}
-    <div class="form-group">
-        <div class="form-column">
-            <button type="submit">Create account</button>
+<div class ="signUpCard">
+    <h3>Sign Up</h3>
+    <form class="form" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %} <!--Safety first!-->
+        {% include 'notes/creation_template.html' %}
+        <div class="form-group">
+            <div class="form-column">
+                <button type="submit">Create account</button>
+            </div>
         </div>
-    </div>
-</form>
-
+    </form>
+</div>
 {% endblock %}

@@ -26,6 +26,7 @@ urlpatterns = [
 
     # /notes/login
     url(r'^login/$', login, {'template_name': 'notes/login.html'})
+
 ]
 
 

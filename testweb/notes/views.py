@@ -55,14 +55,17 @@ class NoteDelete(DeleteView):
 
 class UserFormView(View):
     form_class = UserForm
+    #references UserForm in forms.py
     template_name = 'notes/signup.html'
 
     # blank form for new users
     def get(self, request):
         form = self.form_class(None)
+        # form_class is variable above which is UserForm
+        # from forms.py
         return render(request, self.template_name, {'form': form})
 
-    # handle user signup data
+    # handle user signup data upon POST
     def post(self, request):
         form = self.form_class(request.POST)
 
@@ -77,15 +80,19 @@ class UserFormView(View):
             # be referenced directly as user.attribute
             # must use set method
             user.save()
+            #save to DB
 
             # if username/pass are accurate, return User object
             user = authenticate(username=username, password=password)
 
             if user is not None:
+                #if they exist in DB
                 if user.is_active:
+                    #if they are not invalidated
                     login(request, user)
                     return redirect('notes:index')
                     # redirect to index upon succesful login
+        else:
+            return render(request, 'notes/bad_form.html', {'form':form})
+            #if they enter bad signup info, take them to a page that tells them so
 
-        return render(request, self.template_name, {'form': form})
-        # render login form again if user is not valid

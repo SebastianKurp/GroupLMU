@@ -11,15 +11,19 @@ To run:
 
     ensure python version installed (version 3 at least)
 
-    go into GroupLMU/testweb, run
-
-    pip install django-debug-toolbar
- 
-    python -m http.server
-	        or
-    npm install http-server
-
-    go to 127.0.0.1:8000/notes
+    To run project (Unix machine): 
+    Set up virtualenv (optional, but suggested)
+	1. 'virtualenv name-of-your-virtual-environment' (let's call it env)
+	2. 'env/bin/pip install requests'
+	3. 'source env/bin/activate'
+	You should now be in a virtualenv and any installations will not be global
+	4. make sure the directory you're in had requirements.txt. It should be in GroupLMU/testweb/testweb
+	5. 'pip install -r requirements.txt'
+	6. 'python manage.py runserver'
+	7. navigate to the development server noted in the terminal. This seems to generally be 127.0.0.1:8000
+	8. Append /admin to those numbers for the admin page and /notes for the main page users would see. 
+		Ex: 127.0.0.1:8000/notes
+For Windows users: Step 3 would be 'env\Scripts\activate.bat'
 
 
 See Wiki for more detailed information on construction and outline

@@ -128,3 +128,6 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 LOGIN_REDIRECT_URL = '/notes/'
 #redirect to home page
+
+LOGOUT_REDIRECT_URL = '/notes/'
+#redirect to home

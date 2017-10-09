@@ -1,5 +1,4 @@
-from django.contrib.auth.decorators import login_required
-from django.db import transaction
+from django.contrib.auth.models import User
 from django.template import RequestContext
 from django.views import generic
 from .models import note
@@ -97,5 +96,4 @@ class UserFormView(View):
         else:
             return render(request, 'notes/bad_form.html', {'form':form})
             #if they enter bad signup info, take them to a page that tells them so
-
 

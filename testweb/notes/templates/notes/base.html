@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
     <script src="{% static 'notes/highlight.js' %}"></script>
-    {% block page_title %} Main-Page Testing {% endblock %}
+    <script src="{% static 'notes/js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'notes/js/vendor/what-input.js' %}"></script>
+    <script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
+    <script src="{% static 'notes/js/app.js' %}"></script>
+    {% block page_title %} {% endblock %}
 
 </head>
 
@@ -32,13 +36,15 @@
             </ul>
         </div>
         <div class="Alerts_button">
-            <button class="updates-button">
+            <button class="updates-button" data-reveal-id="myModal">
                 <i class="fa fa-trophy"></i>
-                </button>
+            </button>
         </div>
         <div class="profile">
-            <img class="profile-avatar__image" src="{% static 'notes/images/evernote-logo.png' %}">
-            <span class="profile-avatar_name ">User</span>
+            <img class="profile-avatar__image" src="{% static 'notes/images/sample user profile.png' %}">
+            <button class="offcanvas-trigger" type="button" data-open="offCanvasRight">
+                <span class="offcanvas-trigger-text hide-for-small-only profile-avatar_name">Sebastian</span>
+              </button>
         </div>
     </div>
     <div class="left-nav ">
@@ -54,8 +60,12 @@
             <li class="Click "><a href="# ">Option5</a></li>
         </ul>
     </div>
-
-
+    <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <h2 id="modalTitle">Awesome. I have it.</h2>
+        <p class="lead">Your couch. It is mine.</p>
+        <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
     {% endblock %}
 </body>
 

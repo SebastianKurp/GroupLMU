@@ -7,7 +7,7 @@
 
 .logo {
     height: 100px;
-    width: 100px;
+    width: 100;
 }
 
 
@@ -81,6 +81,7 @@
 .profile-avatar_name {
     color: white;
     font-size: 20px;
+    margin-right: 1em;
 }
 
 .updates-button {
@@ -100,6 +101,9 @@
     -o-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
 }
+
+
+/*Username menu stuff */
 
 
 /*Left Nav Stuff*/

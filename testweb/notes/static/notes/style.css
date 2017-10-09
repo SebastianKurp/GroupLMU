@@ -113,6 +113,32 @@
 }
 
 
+/*Badge section */
+
+#badge {
+    width: 50%;
+    height: 50%
+}
+
+#bage:ua {}
+
+.gridmodal {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+
 /*Username menu stuff */
 
 
@@ -120,9 +146,9 @@
 
 .left-nav {
     background-color: #131d28;
-    width: 400px;
+    width: 23em;
     text-align: center;
-    height: 1500px;
+    height: 500em;
     border-spacing: 10px;
 }
 

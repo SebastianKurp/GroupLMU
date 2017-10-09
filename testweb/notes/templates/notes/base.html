@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
     <script src="{% static 'notes/highlight.js' %}"></script>
-    <script src="{% static 'notes/js/vendor/jquery.js' %}"></script>
-    <script src="{% static 'notes/js/vendor/what-input.js' %}"></script>
-    <script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
-    <script src="{% static 'notes/js/app.js' %}"></script>
     {% block page_title %} {% endblock %}
 
 </head>
@@ -39,6 +35,18 @@
             <button class="updates-button" data-open="trophies">
                 <i class="fa fa-trophy trophy"></i>
             </button>
+            <div class="reveal" id="trophies" data-reveal>
+                <h5>Bages</h5>
+                <div class="gridmodal">
+                    <img class="badge" src="{%static 'notes/images/notes_bronze.png' %}">
+                    <img class="badge" src="{%static 'notes/images/notes_silver.png' %}">
+                    <img class="badge:ua" src="{%static 'notes/images/notes_gold.png' %}">
+                    <img class="badge:ua" src="{%static 'notes/images/notes_diamond.png' %}">
+                </div>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         </div>
         <div class="profile">
             <img class="profile-avatar__image" src="{% static 'notes/images/sample user profile.png' %}">
@@ -60,11 +68,10 @@
             <li class="Click "><a href="# ">Option5</a></li>
         </ul>
     </div>
-    <div id="trophies" class="reveal" data-reveal>
-        <h2 id="modalTitle">Trophies</h2>
-        <p>Insert Trophies here...</p>
-        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-    </div>
+    <script src="{% static 'notes/js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'notes/js/vendor/what-input.js' %}"></script>
+    <script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
+    <script src="{% static 'notes/js/app.js' %}"></script>
     {% endblock %}
 </body>
 

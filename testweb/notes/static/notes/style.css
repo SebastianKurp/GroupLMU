@@ -71,6 +71,7 @@
     width: 200px;
     background-color: #219d46;
     margin-right: 70em;
+    margin-left: 10em;
 }
 
 .profile-avatar__image {
@@ -101,6 +102,14 @@
     -moz-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     -o-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+}
+
+.updates-button:hover {
+    color: green;
+}
+
+.trophy {
+    size: 10px;
 }
 
 

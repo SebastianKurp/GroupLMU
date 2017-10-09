@@ -52,3 +52,5 @@ docs/_build/
 # PyCharm files
 workspace.xml
 tasks.xml
+misc.xml
+vcs.xml

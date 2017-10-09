@@ -1,9 +1,11 @@
+from django.contrib.auth.models import User
+from django.template import RequestContext
 from django.views import generic
 from .models import note
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import authenticate, login
 from .forms import UserForm
 
@@ -23,12 +25,23 @@ class DetailView(generic.DetailView):
     template_name = 'notes/detail.html'
 
 
+def page_not_found(request):
+    response = render_to_response('404.html', context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+
 class NoteCreate(CreateView):
     model = note
     fields = [
         'title',
         'content'
     ]
+    # form_valid override to make sure that
+    # foreign key of user signed in is assigned to note
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(NoteCreate, self).form_valid(form)
 
 
 class NoteUpdate(UpdateView):
@@ -48,14 +61,17 @@ class NoteDelete(DeleteView):
 
 class UserFormView(View):
     form_class = UserForm
+    #references UserForm in forms.py
     template_name = 'notes/signup.html'
 
     # blank form for new users
     def get(self, request):
         form = self.form_class(None)
+        # form_class is variable above which is UserForm
+        # from forms.py
         return render(request, self.template_name, {'form': form})
 
-    # handle user signup data
+    # handle user signup data upon POST
     def post(self, request):
         form = self.form_class(request.POST)
 
@@ -70,15 +86,19 @@ class UserFormView(View):
             # be referenced directly as user.attribute
             # must use set method
             user.save()
+            #save to DB
 
             # if username/pass are accurate, return User object
             user = authenticate(username=username, password=password)
 
             if user is not None:
+                #if they exist in DB
                 if user.is_active:
+                    #if they are not invalidated
                     login(request, user)
                     return redirect('notes:index')
                     # redirect to index upon succesful login
+        else:
+            return render(request, 'notes/bad_form.html', {'form':form})
+            #if they enter bad signup info, take them to a page that tells them so
 
-        return render(request, self.template_name, {'form': form})
-        # render login form again if user is not valid

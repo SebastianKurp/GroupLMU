@@ -1,14 +1,13 @@
-{% extends 'notes/base.html' %}
+{% include 'notes/base.html' %}
 {% load staticfiles %}
 <!--Load path to static files-->
-
-{% block body %}
-<a href="{% url 'notes:note-create' %}">
-    <span class="add_note"> Create Note</span>
-</a>
-    {% if all_notes %}
+{% block nav_bars %}
+{% endblock %}
+{% block note_body %}
+    {% if user.note_set %}
     <ul>
-        {% for note in all_notes %}
+        {% for note in user.note_set.all %}
+        <!--stand django syntax. user (object) . note_set (object set) .all (method on that final object)-->
         <li><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
             <form action="{% url 'notes:note-delete' note.id %}" method="post" style="display: inline;">
                 {% csrf_token %} <!--use everytime using form-->
@@ -23,6 +22,7 @@
                 <button type="submit">
                 <img src="{% static 'notes/images/edit.png' %}" width="45" />
                 </button>
+            </form>
         </li>
         {% endfor %}
     </ul>

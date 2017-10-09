@@ -7,6 +7,7 @@
     {% if user.note_set %}
     <ul>
         {% for note in user.note_set.all %}
+        <!--stand django syntax. user (object) . note_set (object set) .all (method on that final object)-->
         <li><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
             <form action="{% url 'notes:note-delete' note.id %}" method="post" style="display: inline;">
                 {% csrf_token %} <!--use everytime using form-->

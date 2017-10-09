@@ -37,6 +37,11 @@ class NoteCreate(CreateView):
         'title',
         'content'
     ]
+    # form_valid override to make sure that
+    # foreign key of user signed in is assigned to note
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(NoteCreate, self).form_valid(form)
 
 
 class NoteUpdate(UpdateView):

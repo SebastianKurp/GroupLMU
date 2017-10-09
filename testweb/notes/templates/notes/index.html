@@ -4,9 +4,9 @@
 {% block nav_bars %}
 {% endblock %}
 {% block note_body %}
-    {% if all_notes %}
+    {% if user.note_set %}
     <ul>
-        {% for note in all_notes %}
+        {% for note in user.note_set.all %}
         <li><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
             <form action="{% url 'notes:note-delete' note.id %}" method="post" style="display: inline;">
                 {% csrf_token %} <!--use everytime using form-->

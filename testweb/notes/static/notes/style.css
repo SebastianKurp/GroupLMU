@@ -115,9 +115,8 @@
 
 /*Badge section */
 
-#badge {
-    width: 50%;
-    height: 50%
+.badge {
+    background: #219d46;
 }
 
 #bage:ua {}
@@ -140,6 +139,70 @@
 
 
 /*Username menu stuff */
+
+.multilevel-accordion-menu .is-accordion-submenu-parent a {
+    /* background: #4d5158; */
+}
+
+.multilevel-accordion-menu .is-accordion-submenu a {
+    /* background: #35383d; */
+}
+
+.multilevel-accordion-menu .sublevel-1 {
+    text-indent: 1rem;
+}
+
+.multilevel-accordion-menu .sublevel-2 {
+    text-indent: 2rem;
+}
+
+.multilevel-accordion-menu .sublevel-3 {
+    text-indent: 3rem;
+}
+
+.multilevel-accordion-menu .sublevel-4 {
+    text-indent: 4rem;
+}
+
+.multilevel-accordion-menu .sublevel-5 {
+    text-indent: 5rem;
+}
+
+.multilevel-accordion-menu .sublevel-6 {
+    text-indent: 6rem;
+}
+
+.multilevel-accordion-menu a {
+    color: #fefefe;
+    font-size: 30px;
+}
+
+.multilevel-accordion-menu a::after {
+    border-color: #fefefe transparent transparent;
+}
+
+.multilevel-accordion-menu .menu>li:not(.menu-text)>a {
+    padding: 1.2rem 1rem;
+}
+
+
+/* .multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a.subitem::before {
+    content: "\f016";
+    font-family: FontAwesome;
+    margin-right: 1rem;
+}
+
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a::before {
+    content: "\f07c";
+    font-family: FontAwesome;
+    margin-right: 1rem;
+} */
+
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="false"] a::after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    margin-left: .5em;
+}
 
 
 /*Left Nav Stuff*/

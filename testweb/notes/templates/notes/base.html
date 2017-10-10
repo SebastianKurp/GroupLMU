@@ -36,7 +36,8 @@
                 <i class="fa fa-trophy trophy"></i>
             </button>
             <div class="reveal" id="trophies" data-reveal>
-                <h5>Bages</h5>
+                <h5>Badges</h5>
+                <p>Green background means you have accquired this badge(will probably change this in the final)</p>
                 <div class="gridmodal">
                     <img class="badge" src="{%static 'notes/images/notes_bronze.png' %}">
                     <img class="badge" src="{%static 'notes/images/notes_silver.png' %}">
@@ -50,9 +51,17 @@
         </div>
         <div class="profile">
             <img class="profile-avatar__image" src="{% static 'notes/images/sample user profile.png' %}">
-            <button class="offcanvas-trigger" type="button" data-open="offCanvasRight">
-                <span class="offcanvas-trigger-text hide-for-small-only profile-avatar_name">Sebastian</span>
-              </button>
+        </div>
+        <div class="pa">
+            <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
+                <li>
+                    <a href="#">Sebastian</a>
+                    <ul class="menu vertical sublevel-1">
+                        <li>
+                            <a href="#">Settings</a>
+                        </li>
+                </li>
+                </ul>
         </div>
     </div>
     <div class="left-nav ">

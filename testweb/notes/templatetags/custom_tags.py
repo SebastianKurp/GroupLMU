@@ -15,8 +15,10 @@ def get_note_contents(value):
 
 @register.filter(name='get_note')
 def get_note(note):
-    searchResults = search(note.content, note.title, "cat", 10)
+    note_with_line_split = note.content+"\n"
+    print(note_with_line_split)
+    searchResults = search(note_with_line_split, note.title, "cat", 10)
     print("Content: " + note.content + " Title: " +  note.title)
-    result = showResult("Testing...", searchResults)
+    print("Search results: ")
     print(searchResults)
-    return result
+    return "Debugging"

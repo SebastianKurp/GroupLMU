@@ -12,7 +12,8 @@ def search(fileContents, fileNames, term, maxOutputLen):
         # iterate through each file
         currFile = [fileNames[i]]
         # start building a result for the current file, starting with this file's name
-        lines = fileContents[i].split('\n')
+        lines = fileContents.split('\n')
+        print(str(lines))
         if lines:
             for j in range(len(lines)):
                 print("Debugging... " + str(lines))

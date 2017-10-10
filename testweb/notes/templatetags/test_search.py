@@ -68,7 +68,7 @@ Cats learn specifically how their owners react when they make particular noises.
     showResult('mentions found (by note):',mentionsByNote)
     showResult('keywords found (by symbol):',keywordsBySymbol)
 
-main()
+#main()
 
 #need to add
 #   the max len should still matter for notes with really long titles when sorting by symbol

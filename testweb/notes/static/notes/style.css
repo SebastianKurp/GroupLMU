@@ -14,7 +14,7 @@
 /*Top bar */
 
 .top-bar-center {
-    position: relative;
+    position: static;
 }
 
 .menu {
@@ -22,7 +22,7 @@
 }
 
 .top-bar {
-    position: relative;
+    position: static;
 }
 
 .top-bar,
@@ -49,7 +49,7 @@
 
 .top-bar input {
     max-width: 1200px;
-    position: relative;
+    position: static;
 }
 
 [type='search'] {
@@ -119,7 +119,7 @@
     background: #219d46;
 }
 
-#bage:ua {}
+.bage:ua {}
 
 .gridmodal {
     display: grid;
@@ -139,6 +139,10 @@
 
 .tool-tip {
     color: #219d46;
+}
+
+.has-tip {
+    border-bottom: none;
 }
 
 h5 {

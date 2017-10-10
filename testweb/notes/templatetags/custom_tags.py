@@ -21,4 +21,4 @@ def get_note(note):
     print("Content: " + note.content + " Title: " +  note.title)
     print("Search results: ")
     print(searchResults)
-    return "Debugging"
+    return searchResults

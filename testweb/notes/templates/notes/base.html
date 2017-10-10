@@ -17,13 +17,14 @@
             <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
             <div class="title-bar-title">Menu</div>
         </div> -->
-
+    <!--Logo-->
     <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
                 <li class="menu-text"><img class="logo" src="{%static 'notes/images/evernote-logo.png' %}"></li>
             </ul>
         </div>
+        <!--Search Area-->
         <div class="top-bar-center">
             <ul class="menu">
                 <!-- <input type="search" name="search" placeholder="Search.." class="animated-search-form"> -->
@@ -31,6 +32,7 @@
                 <li><button type="button" class="button">Search</button></li>
             </ul>
         </div>
+        <!--Badge area-->
         <div class="Alerts_button">
             <button class="updates-button" data-open="trophies">
                 <i class="fa fa-trophy trophy"></i>
@@ -38,17 +40,19 @@
             <div class="reveal" id="trophies" data-reveal>
                 <h5>Badges</h5>
                 <p>Green background means you have accquired this badge(will probably change this in the final)</p>
+                <p>Hover over the badge to see what you need to get the badge!</p>
                 <div class="gridmodal">
-                    <img class="badge" src="{%static 'notes/images/notes_bronze.png' %}">
-                    <img class="badge" src="{%static 'notes/images/notes_silver.png' %}">
-                    <img class="badge:ua" src="{%static 'notes/images/notes_gold.png' %}">
-                    <img class="badge:ua" src="{%static 'notes/images/notes_diamond.png' %}">
+                    <img class="badge" src="{%static 'notes/images/notes_bronze.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="FILL THIS WITH IMPORTANT INFO">
+                    <img class="badge" src="{%static 'notes/images/notes_silver.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="FILL THIS WITH IMPORTANT INFO">
+                    <img class="badge:ua" src="{%static 'notes/images/notes_gold.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="FILL THIS WITH IMPORTANT INFO">
+                    <img class="badge:ua" src="{%static 'notes/images/notes_diamond.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="FILL THIS WITH IMPORTANT INFO">
                 </div>
                 <button class="close-button" data-close aria-label="Close modal" type="button">
                   <span aria-hidden="true">&times;</span>
                 </button>
             </div>
         </div>
+        <!--Profile Image and Name stuf -->
         <div class="profile">
             <img class="profile-avatar__image" src="{% static 'notes/images/sample user profile.png' %}">
         </div>
@@ -64,6 +68,7 @@
                 </ul>
         </div>
     </div>
+    <!--Left-Nav-->
     <div class="left-nav ">
         <ul class="side-nav " role="navigation ">
             <li class="Click "><a href="# ">Option1</a></li>

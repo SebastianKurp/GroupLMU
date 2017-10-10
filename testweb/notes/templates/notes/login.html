@@ -1,11 +1,11 @@
-{% extends 'notes/base.html' %}
-
-{% block body %}
+<!-- {% extends 'notes/base.html' %} not sure we want this  -->
+{%load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'notes/loggystyle.css' %}" /> {% block page_title %} {% endblock %} {% block body %}
 <h1>Login to your account</h1>
 <div class="login-form">
     <form method="post">
-        {% csrf_token %}
-        {{form.as_p}} <!--'As paragraph django method-->
+        {% csrf_token %} {{form.as_p}}
+        <!--'As paragraph django method-->
         <button type="submit">Login</button>
     </form>
 </div>

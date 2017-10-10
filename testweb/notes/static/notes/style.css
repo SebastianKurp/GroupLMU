@@ -137,6 +137,15 @@
     font-size: 150%;
 }
 
+.tool-tip {
+    color: #219d46;
+}
+
+h5 {
+    text-align: center;
+    font-size: 2em;
+}
+
 
 /*Username menu stuff */
 

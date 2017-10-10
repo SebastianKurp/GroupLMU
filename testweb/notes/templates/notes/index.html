@@ -1,5 +1,6 @@
 {% include 'notes/base.html' %}
 {% load staticfiles %}
+{% load custom_tags %}
 <!--Load path to static files-->
 {% block nav_bars %}
 {% endblock %}
@@ -26,7 +27,7 @@
                 </button>
             </form>
         </li>
-        <li id="note_contents">{{ note.content }}</li>
+        <li id="note_contents">{{ note.content|get_note_contents }}</li>
         <li id="search_note"><a href=#>Search this note</a></li>
         <!--Maybe we could make this a magnifying glass which brings up a little modal/dialog of search
         options when you click it?-->

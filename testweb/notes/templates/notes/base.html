@@ -1,12 +1,16 @@
 <!DOCTYPE html> {% load staticfiles %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
+
     <link rel="stylesheet" href="{% static 'notes/foundation.css' %}" />
+    <link rel="stylesheet" href="{% static 'notes/searchPopup.css' %}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
+
     <script src="{% static 'notes/highlight.js' %}"></script>
+    <script src="{% static 'notes/searchPopup.js' %}"></script>
     {% block page_title %} Main-Page Testing {% endblock %}
 
 </head>
@@ -28,8 +32,21 @@
             <ul class="menu">
                 <!-- <input type="search" name="search" placeholder="Search.." class="animated-search-form"> -->
                 <li><input type="search" placeholder="Search"></li>
-                <li><button type="button" class="button">Search</button></li>
+                <li><button type="button" id="searchBtn" class="button">Search</button></li>
             </ul>
+        </div>
+        <!-- popup for search feature -->
+        <div id="popup" class="popup">
+            <div>
+                <span id="close" class="close">&timesb;</span>
+                <form class="content">
+                    <input type="text" class="textInput" name="keyword" placeholder="Keyword">
+                    <input type="text" name="symbol" placeholder="Symbol">
+                    <input type="submit" name="submitSearch" value="Submit">
+
+                </form>
+
+            </div>
         </div>
         <div class="Alerts_button">
             <button class="updates-button">

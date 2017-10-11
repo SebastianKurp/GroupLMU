@@ -2,35 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c74724eb-4ab3-4de9-ad4a-eb3d38aeb5c7" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/D1SchoolsTop5Sports.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/out/test/330Assignment1/Search.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/MobyDick.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/out/test/330Assignment1/Tests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/NoteTaking/src/Note.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/.idea/330Assignment1.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/exceldata5.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/NoteTaking/src/Search.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/pages79-84.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/The-Popes-Tweets.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/NoteTaking/NoteTaking.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/git_commands.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/D1SchoolsTop5Sports.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/NoteTaking/src/Tests.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/BUY-POST-IT-NOTES.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/README.md" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/out/test/330Assignment1/Note.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/MobyDick.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/sushi-cookbook.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/out/test/330Assignment1/Tests.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/out/test/330Assignment1/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/git_commands.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/pages79-84.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/exceldata5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/sconeRecipe.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/.idea/330Assignment1.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/NoteTaking/src/Note.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/growingBasil.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/The-Popes-Tweets.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/NoteTaking/src/Tests.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/stepByStepGuide-lightingCandles.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/sushi-cookbook.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/How-To-Use-A-Screwdriver.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/_DonaldDuck.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/NoteTaking/src/Main.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/starwars9script.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/out/test/330Assignment1/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/out/test/330Assignment1/Search.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/How-To-Use-A-Screwdriver.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/_DonaldDuck.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/NoteTaking/NoteTaking.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/sconeRecipe.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/330Assignment1/Too-Many-Cats/growingBasil.txt" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,37 +46,31 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <marker date="1507670037730" expanded="true" signature="263:325" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchPopup.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/searchPopup.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="highlight.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/highlight.js">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="29" column="65" lean-forward="false" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="foundation.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/foundation.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92775">
-              <caret line="3711" column="17" lean-forward="false" selection-start-line="3711" selection-start-column="17" selection-end-line="3711" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="350">
+              <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+              <folding>
+                <element signature="e#1773#1781#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,18 +78,38 @@
       <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="250">
+              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="searchPopup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/searchPopup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="creation_template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/creation_template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/signup.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -115,12 +129,15 @@
         <option value="$PROJECT_DIR$/testweb/notes/static/notes/style.css" />
         <option value="$PROJECT_DIR$/testweb/notes/templates/notes/note_form.html" />
         <option value="$PROJECT_DIR$/testweb/notes/templates/notes/detail.html" />
-        <option value="$PROJECT_DIR$/testweb/notes/templates/notes/base.html" />
         <option value="$PROJECT_DIR$/testweb/notes/static/notes/highlight.css" />
-        <option value="$PROJECT_DIR$/testweb/notes/static/notes/highlight.js" />
         <option value="$PROJECT_DIR$/testweb/notes/static/notes/singup.css" />
         <option value="$PROJECT_DIR$/testweb/notes/templates/notes/signup.html" />
         <option value="$PROJECT_DIR$/testweb/notes/static/notes/signup.css" />
+        <option value="$PROJECT_DIR$/testweb/notes/static/notes/highlight.js" />
+        <option value="$PROJECT_DIR$/testweb/notes/static/notes/seachPopup.js" />
+        <option value="$PROJECT_DIR$/testweb/notes/static/notes/searchPopup.js" />
+        <option value="$PROJECT_DIR$/testweb/notes/templates/notes/base.html" />
+        <option value="$PROJECT_DIR$/testweb/notes/static/notes/searchPopup.css" />
       </list>
     </option>
   </component>
@@ -227,10 +244,6 @@
               <item name="GroupLMU" type="462c0819:PsiDirectoryNode" />
               <item name="testweb" type="462c0819:PsiDirectoryNode" />
               <item name="testweb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupLMU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -364,13 +377,17 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29247573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3276699" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3047404" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19135135" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -407,32 +424,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testweb/notes/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testweb/testweb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="40" column="20" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/django-1.11.5-py3.6.egg/django/core/management/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8425">
-          <caret line="337" column="0" lean-forward="false" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#1773#1781#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -440,7 +438,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1507670037730" expanded="true" signature="263:325" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -580,6 +580,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -587,14 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/foundation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92775">
-          <caret line="3711" column="17" lean-forward="false" selection-start-line="3711" selection-start-column="17" selection-end-line="3711" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,6 +615,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1507670037735" expanded="true" signature="1120:1151" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -629,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,14 +633,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1507670037730" expanded="true" signature="263:325" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/foundation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="3711" column="17" lean-forward="false" selection-start-line="3711" selection-start-column="17" selection-end-line="3711" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/highlight.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="29" column="65" lean-forward="false" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -658,42 +670,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/login.html">
+    <entry file="file://$PROJECT_DIR$/testweb/notes/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/base.html">
+    <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/searchPopup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        <state relative-caret-position="150">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
+        <state relative-caret-position="-2576">
           <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/signup.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+          <folding>
+            <element signature="e#1773#1781#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testweb/notes/templates/notes/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testweb/notes/static/notes/searchPopup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>

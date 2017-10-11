@@ -39,6 +39,8 @@ function deselect(){//deselects in browser to display the highlighting in yellow
         window.getSelection().removeAllRanges();
     }
 }
+
+
 document.onmouseup = getText;
 
 

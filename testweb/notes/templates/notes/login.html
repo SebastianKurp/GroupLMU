@@ -1,8 +1,8 @@
-<!-- {% extends 'notes/base.html' %} not sure we want this  -->
-{%load staticfiles %}
+{% extends 'notes/base.html' %} {%load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'notes/loggystyle.css' %}" /> {% block page_title %} {% endblock %} {% block body %}
 <h1>Login to your account</h1>
 <div class="login-form">
+    <h2> Login </h2>
     <form method="post">
         {% csrf_token %} {{form.as_p}}
         <!--'As paragraph django method-->

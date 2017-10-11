@@ -13,11 +13,11 @@ def get_note_contents(value):
 # outputs a shortened version of the note's contents
 
 
-@register.filter(name='get_note')
-def get_note(note):
+@register.simple_tag(name="search_word")
+def search_word(note, keyword):
     note_with_line_split = note.content+"\n"
     print(note_with_line_split)
-    searchResults = search(note_with_line_split, note.title, "cat", 10)
+    searchResults = search(note_with_line_split, note.title, keyword, 20)
     print("Content: " + note.content + " Title: " +  note.title)
     print("Search results: ")
     print(searchResults)

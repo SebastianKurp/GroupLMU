@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
 body {
-    background: url(http://www.reactiongifs.com/wp-content/uploads/2013/11/I-have-no-idea-what-I-am-doing.gif) no-repeat center center fixed;
+    background: url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -11,7 +11,7 @@ body {
 .login-card {
     position: relative;
     padding: 40px;
-    width: 400px;
+    width: 500px;
     background-color: #F7F7F7;
     margin: 400px auto 10px;
     border-radius: 2px;

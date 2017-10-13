@@ -2,6 +2,10 @@
     background: white url('images/white_blurry_bg.jpg');
 } */
 
+/* Note listing */
+.notes {
+align: relative;
+}
 
 /*Nav bar stuff*/
 
@@ -49,7 +53,7 @@
 
 .top-bar input {
     max-width: 1200px;
-    position: static;
+
 }
 
 [type='search'] {
@@ -67,6 +71,7 @@
 }
 
 .button {
+
     height: 50px;
     width: 200px;
     background-color: #219d46;
@@ -75,24 +80,25 @@
 }
 
 .profile-avatar__image {
-    width: 70pxs;
-    height: 60px;
-    border-radius: 30px;
+    width: 4em;
+    height: 2.5em;
+    border-radius: 2em;
 }
 
 .profile-avatar_name {
     color: white;
+
     font-size: 20px;
     margin-right: 1em;
 }
 
 .updates-button {
-    height: 60px;
-    width: 60px;
+    height: 3em;
+    width: 3em;
     background-color: #c2c2c2;
     border: none;
-    padding: 10px;
-    border-radius: 30px;
+    padding: 1em;
+    border-radius: 11em;
     outline: 0;
     position: relative;
     cursor: pointer;
@@ -222,6 +228,7 @@ h5 {
 
 .left-nav {
     background-color: #131d28;
+
     width: 23em;
     text-align: center;
     height: 500em;
@@ -236,9 +243,9 @@ h5 {
 
 .Click,
 a {
-    font-size: 50px;
+    font-size: 1.25em;
     color: #219d46;
-    margin-bottom: 100px;
+    margin-bottom: auto;
     border-color: white;
 }
 

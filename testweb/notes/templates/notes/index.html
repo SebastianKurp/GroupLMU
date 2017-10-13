@@ -1,15 +1,16 @@
-{% extends 'notes/base.html' %}
+{% include 'notes/base.html' %}
 {% load staticfiles %}
+{% load custom_tags %}
 <!--Load path to static files-->
-
-{% block body %}
-<a href="{% url 'notes:note-create' %}">
-    <span class="add_note"> Create Note</span>
-</a>
-    {% if all_notes %}
+{% block nav_bars %}
+{% endblock %}
+{% block note_body %}
+    {% if user.note_set %}
     <ul>
-        {% for note in all_notes %}
-        <li><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
+        {% for note in user.note_set.all %}
+        <!--stand django syntax. user (object) . note_set (object set) .all (method on that final object)-->
+        <li id="note_title"><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
+            <!--This links to the note-delete view/URL-->
             <form action="{% url 'notes:note-delete' note.id %}" method="post" style="display: inline;">
                 {% csrf_token %} <!--use everytime using form-->
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
@@ -17,13 +18,19 @@
                 <img src="{% static 'notes/images/delete.png' %}" width="45" />
                 </button>
             </form>
+            <!--This links to note-create view/URL-->
             <form action="{% url 'notes:note-update' note.id %}" method="post" style="display: inline;">
                 {% csrf_token %}
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
                 <button type="submit">
                 <img src="{% static 'notes/images/edit.png' %}" width="45" />
                 </button>
+            </form>
         </li>
+        <li id="note_contents">{{ note.content|get_note_contents }}</li>
+        <li id="search_note"><a href=#>Search this note</a></li>
+        <!--Maybe we could make this a magnifying glass which brings up a little modal/dialog of search
+        options when you click it?-->
         {% endfor %}
     </ul>
     {% else %}

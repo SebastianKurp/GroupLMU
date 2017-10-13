@@ -25,7 +25,8 @@ SECRET_KEY = 'qg6ludl!a44w6c39xa*_15du0dmxj#ty^$4%ad!z=c2slgs4$6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+#'*' would be a bad idea in actual production
 
 
 # Application definition
@@ -38,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'notes.apps.CatsConfig',
-    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -47,7 +47,6 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -57,7 +56,9 @@ ROOT_URLCONF = 'testweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '/notes/templates/notes',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,12 +123,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-def show_toolbar(request):
-    if not request.is_ajax() and request.user and request.user.username == 'admin':
-        return True
-    return False
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
-DEBUG_TOOLBAR_CONFIG = {
-    'SHOW_TOOLBAR_CALLBACK': 'testweb.settings.show_toolbar',
+LOGIN_REDIRECT_URL = '/notes/'
+#redirect to home page
 
-}
+LOGOUT_REDIRECT_URL = '/notes/'
+#redirect to home
+
+AUTH_PROFILE_MODUKE = 'notes.UserProfile'

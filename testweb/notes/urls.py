@@ -3,6 +3,7 @@ from . import views
 from django.contrib.auth.views import login
 
 app_name = 'notes'
+handler404 = 'views.page_not_found'
 
 urlpatterns = [
     # /notes/
@@ -24,7 +25,9 @@ urlpatterns = [
     url(r'^signup/$', views.UserFormView.as_view(), name='signup'),
 
     # /notes/login
-    url(r'^login/$', login, {'template_name': 'notes/login.html'})
+    url(r'^login/$', login, {'template_name': 'notes/login.html'}),
+
+
 ]
 
 

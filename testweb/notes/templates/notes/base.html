@@ -1,4 +1,5 @@
 <!DOCTYPE html> {% load staticfiles %}
+
 <html lang="en">
 
 <head>
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-    {% block note_body %}
+    {% block nav_bars %}
     <!-- <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
             <div class="title-bar-title">Menu</div>
@@ -54,6 +55,7 @@
         </div>
         <!--Profile Image and Name stuf -->
         <div class="profile">
+
             <img class="profile-avatar__image" src="{% static 'notes/images/sample user profile.png' %}">
         </div>
         <div class="pa">
@@ -72,15 +74,23 @@
     <!-- <div class="left-nav ">
         <ul class="side-nav " role="navigation ">
             <li class="Click "><a href="# ">Option1</a></li>
+            <img class="profile-avatar__image" src="{% static 'notes/images/evernote-logo.png' %}">
+            <span class="profile-avatar_name "><a href=#>{{ user.username }}</a></span>
+        </div>
+    </div>
+    <div class="left-nav ">
+        <ul class="side-nav " role="navigation">
+            <li class="Click "><a href="/notes/login">Login</a></li>
+
             <li class="divider "></li>
-            <li class="Click "><a href="# ">Option2</a></li>
+            <li class="Click "><a href="/notes/logout">Logout</a></li>
             <li class="divider "></li>
-            <li class="Click "><a href="# ">Option3</a></li>
+            <li class="Click "><a href="/notes/signup">Sign Up</a></li>
             <li class="divider "></li>
-            <li class="Click "><a href="# ">Option4</a></li>
+            <li class="Click "><a href="{% url 'notes:note-create' %}">Create a Note</a></li>
             <li class="divider "></li>
             <li class="Click "><a href="# ">Option5</a></li>
-        </ul>
+</ul>
     </div> -->
     <!--Gird for dispalying-->
     <div class="notes">
@@ -189,6 +199,7 @@
     <script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
     <script src="{% static 'notes/js/app.js' %}"></script>
     {% endblock %}
+        </div>
 </body>
 
 </html>

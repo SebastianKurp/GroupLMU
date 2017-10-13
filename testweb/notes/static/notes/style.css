@@ -70,7 +70,7 @@
     height: 50px;
     width: 200px;
     background-color: #219d46;
-    margin-right: 70em;
+    margin-right: 10em;
     margin-left: .5em;
 }
 
@@ -258,9 +258,7 @@ a {
     /* margin: 1rem 0; */
     overflow: hidden;
     border-radius: 0;
-    margin-left: 23em;
     position: relative;
-    top: -500em;
 }
 
 .card-info .card-info-label {

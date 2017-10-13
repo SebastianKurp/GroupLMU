@@ -1,12 +1,33 @@
+<!DOCTYPE html> {% load staticfiles %}
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'notes/foundation.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/logstyle.css' %}" />
+    <title>Sign-In"App Name Goes Here"</title>
+    {% block page_title %} {% endblock %}
 
-{% block body %}
-<h1>Login to your account</h1>
-<div class="login-form">
-    <form method="post">
-        {% csrf_token %}
-        {{form.as_p}} <!--'As paragraph django method-->
-        <button type="submit">Login</button>
-    </form>
-</div>
-{% endblock %}
+</head>
+
+<body>
+    {% block note_body %}
+    <div class="login-card">
+        <h1>"App Name Here"</h1>
+        <h2>Sign-in</h2><br>
+
+        <form>
+            <input type="text" name="user" placeholder="Username">
+            <input type="password" name="pass" placeholder="Password">
+            <input type="submit" name="login" class="login login-submit" value="Login">
+        </form>
+
+        <div class="login-help">
+            <a href="{% templates 'notes/signup.html' %" }>Register</a>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

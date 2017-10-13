@@ -1,4 +1,3 @@
-
 /* body {
     background: white url('images/white_blurry_bg.jpg');
 } */
@@ -12,14 +11,14 @@ align: relative;
 
 .logo {
     height: 100px;
-    width: 100px;
+    width: 100;
 }
 
 
 /*Top bar */
 
 .top-bar-center {
-    position: relative;
+    position: static;
 }
 
 .menu {
@@ -27,8 +26,7 @@ align: relative;
 }
 
 .top-bar {
-    position: relative;
-    margin: auto;
+    position: static;
 }
 
 .top-bar,
@@ -54,17 +52,17 @@ align: relative;
 } */
 
 .top-bar input {
-    max-width: auto;
-    position: relative;
-    right: auto;
+    max-width: 1200px;
+
 }
 
 [type='search'] {
-    height: 100px;
+    height: 50px;
     width: 300px;
     border: transparent;
     background-color: rgba(0, 0, 0, 0.00);
     text-decoration-color: #219d46;
+    color: #219d46;
 }
 
 [type='search']:focus {
@@ -73,9 +71,12 @@ align: relative;
 }
 
 .button {
-    height: 2.5em;
-    width: 9em;
+
+    height: 50px;
+    width: 200px;
     background-color: #219d46;
+    margin-right: 10em;
+    margin-left: .5em;
 }
 
 .profile-avatar__image {
@@ -86,7 +87,9 @@ align: relative;
 
 .profile-avatar_name {
     color: white;
-    font-size: 1.2em;
+
+    font-size: 20px;
+    margin-right: 1em;
 }
 
 .updates-button {
@@ -100,10 +103,124 @@ align: relative;
     position: relative;
     cursor: pointer;
     float: left;
+    margin-right: 1em;
     -webkit-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     -moz-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     -o-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+}
+
+.updates-button:hover {
+    color: green;
+}
+
+.trophy {
+    size: 10px;
+}
+
+
+/*Badge section */
+
+.badge {
+    background: #219d46;
+}
+
+.bage:ua {}
+
+.gridmodal {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+.tool-tip {
+    color: #219d46;
+}
+
+.has-tip {
+    border-bottom: none;
+}
+
+h5 {
+    text-align: center;
+    font-size: 2em;
+}
+
+
+/*Username menu stuff */
+
+.multilevel-accordion-menu .is-accordion-submenu-parent a {
+    /* background: #4d5158; */
+}
+
+.multilevel-accordion-menu .is-accordion-submenu a {
+    /* background: #35383d; */
+}
+
+.multilevel-accordion-menu .sublevel-1 {
+    text-indent: 1rem;
+}
+
+.multilevel-accordion-menu .sublevel-2 {
+    text-indent: 2rem;
+}
+
+.multilevel-accordion-menu .sublevel-3 {
+    text-indent: 3rem;
+}
+
+.multilevel-accordion-menu .sublevel-4 {
+    text-indent: 4rem;
+}
+
+.multilevel-accordion-menu .sublevel-5 {
+    text-indent: 5rem;
+}
+
+.multilevel-accordion-menu .sublevel-6 {
+    text-indent: 6rem;
+}
+
+.multilevel-accordion-menu a {
+    color: #fefefe;
+    font-size: 30px;
+}
+
+.multilevel-accordion-menu a::after {
+    border-color: #fefefe transparent transparent;
+}
+
+.multilevel-accordion-menu .menu>li:not(.menu-text)>a {
+    padding: 1.2rem 1rem;
+}
+
+
+/* .multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a.subitem::before {
+    content: "\f016";
+    font-family: FontAwesome;
+    margin-right: 1rem;
+}
+
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a::before {
+    content: "\f07c";
+    font-family: FontAwesome;
+    margin-right: 1rem;
+} */
+
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="false"] a::after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    margin-left: .5em;
 }
 
 
@@ -111,10 +228,11 @@ align: relative;
 
 .left-nav {
     background-color: #131d28;
-    width: 10em;
+
+    width: 23em;
     text-align: center;
-    height: 50em;
-    border-spacing: 3em;
+    height: 500em;
+    border-spacing: 10px;
 }
 
 .divider {
@@ -134,5 +252,105 @@ a {
 .Click {
     /* border-style: solid; */
     /* border-color: #ff0000 #0000ff; */
-    padding: 1em;
+    padding: 50px;
+}
+
+
+/*note section*/
+
+.card-info {
+    background: #fefefe;
+    border: 1px solid #8a8a8a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* margin: 1rem 0; */
+    overflow: hidden;
+    border-radius: 0;
+    position: relative;
+}
+
+.card-info .card-info-label {
+    border-color: transparent #8a8a8a transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #8a8a8a rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+.card-info.primary {
+    border-color: #1779ba;
+}
+
+.card-info.primary .card-info-label {
+    border-color: transparent #1779ba transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #1779ba rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+.card-info.secondary {
+    border-color: #767676;
+}
+
+.card-info.secondary .card-info-label {
+    border-color: transparent #767676 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #767676 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+.card-info.info {
+    border-color: #37a0e6;
+}
+
+.card-info.info .card-info-label {
+    border-color: transparent #37a0e6 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #37a0e6 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+.card-info.alert {
+    border-color: #cc4b37;
+}
+
+.card-info.alert .card-info-label {
+    border-color: transparent #cc4b37 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #cc4b37 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+.card-info.success {
+    border-color: #3adb76;
+}
+
+.card-info.success .card-info-label {
+    border-color: transparent #3adb76 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #3adb76 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+.card-info.warning {
+    border-color: #ffae00;
+}
+
+.card-info.warning .card-info-label {
+    border-color: transparent #ffae00 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #ffae00 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+.card-info .card-info-label {
+    border-style: solid;
+    border-width: 0 4.375rem 2.5rem 0;
+    float: right;
+    height: 0px;
+    width: 0px;
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.card-info .card-info-content {
+    padding: 0.5rem 1.5rem 0.875rem;
+}
+
+.card-info .card-info-label-text {
+    color: #fefefe;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: relative;
+    right: -2.5rem;
+    top: 2px;
+    white-space: nowrap;
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
 }

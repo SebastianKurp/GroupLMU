@@ -135,7 +135,7 @@ LOGIN_REDIRECT_URL = '/notes/'
 LOGOUT_REDIRECT_URL = '/notes/'
 #redirect to home
 
-AUTH_PROFILE_MODUKE = 'notes.UserProfile'
+AUTH_PROFILE_MODULE = 'notes.UserProfile'
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.open_id.OpenIdAuth',

@@ -1,14 +1,24 @@
+{% include 'notes/creation_template.html' %}
 {% block form_title %} {% endblock %}
+{% load staticfiles %}
 
 {% block page %}
-<form class="form" action="" method="post" enctype="multipart/form-data">
-    {% csrf_token %} <!--Safety first!-->
-    {% include 'notes/creation_template.html' %}
-    <div class="form-group">
-        <div class="form-column">
-            <button type="submit">Create Note</button>
+<div class="login-card">
+        <div class="login-body">
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}} <!--'As paragraph django method-->
+        <div id="submit">
+        <button type="submit">Create Note</button>
+            </div>
+    </form>
         </div>
     </div>
+<div id="nav">
+    <a href="/notes/logout">Logout</a><br><br>
+    <a href="/notes/">Back</a>
+</div>
 </form>
 
 {% endblock %}

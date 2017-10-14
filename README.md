@@ -25,6 +25,7 @@ To run:
 		Ex: 127.0.0.1:8000/notes
 For Windows users: Step 3 would be 'env\Scripts\activate.bat'
 
+A brief overview of how to use the web-app can be found in the Wiki under 'Get Started'
 
 See Wiki for more detailed information on construction and outline
 

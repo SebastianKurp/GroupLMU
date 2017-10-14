@@ -80,9 +80,8 @@ align: relative;
 }
 
 .profile-avatar__image {
-    width: 4em;
-    height: 2.5em;
-    border-radius: 2em;
+    width: 3em;
+    height: 3em;
 }
 
 .profile-avatar_name {
@@ -252,7 +251,7 @@ a {
 .Click {
     /* border-style: solid; */
     /* border-color: #ff0000 #0000ff; */
-    padding: 50px;
+    padding: 25px;
 }
 
 

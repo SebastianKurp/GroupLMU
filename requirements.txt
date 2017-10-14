@@ -1,5 +1,0 @@
--r requirements-dev.txt
-gunicorn
-psycopg2
-Django==1.11.5
-pytz==2017.2

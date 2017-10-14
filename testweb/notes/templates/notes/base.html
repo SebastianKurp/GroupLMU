@@ -1,4 +1,5 @@
 <!DOCTYPE html> {% load staticfiles %}
+
 <html lang="en">
 
 <head>
@@ -6,23 +7,25 @@
     <link rel="stylesheet" href="{% static 'notes/foundation.css' %}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
-    <script src="{% static 'notes/test.js' %}"></script>
     <script src="{% static 'notes/highlight.js' %}"></script>
+    {% block page_title %} {% endblock %}
+
 </head>
 
 <body>
-    {% block note_body %}
+    {% block nav_bars %}
     <!-- <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
             <div class="title-bar-title">Menu</div>
         </div> -->
-
+    <!--Logo-->
     <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
-                <li class="menu-text"><img class="logo" src="{%static images/evernote-logo.png %"></li>
+                <li class="menu-text"><img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"></li>
             </ul>
         </div>
+        <!--Search Area-->
         <div class="top-bar-center">
             <ul class="menu">
                 <!-- <input type="search" name="search" placeholder="Search.." class="animated-search-form"> -->
@@ -30,32 +33,173 @@
                 <li><button type="button" class="button">Search</button></li>
             </ul>
         </div>
+        <!--Badge area-->
         <div class="Alerts_button">
-            <button class="updates-button">
-                <i class="fa fa-bell"></i>
+            <button class="updates-button" data-open="trophies">
+                <i class="fa fa-trophy trophy"></i>
+            </button>
+            <div class="reveal" id="trophies" data-reveal>
+                <h5>Badges</h5>
+                <p>Green background means you have accquired this badge(will probably change this in the final)</p>
+                <p>Hover over the badge to see what you need to get the badge!</p>
+                <div class="gridmodal">
+                    <img class="badge" src="{%static 'notes/images/notes_bronze.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="FILL THIS WITH IMPORTANT INFO">
+                    <img class="badge" src="{%static 'notes/images/notes_silver.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="FILL THIS WITH IMPORTANT INFO">
+                    <img class="badge:ua" src="{%static 'notes/images/notes_gold.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="FILL THIS WITH IMPORTANT INFO">
+                    <img class="badge:ua" src="{%static 'notes/images/notes_diamond.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="FILL THIS WITH IMPORTANT INFO">
+                </div>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
                 </button>
+            </div>
         </div>
+        <!--Profile Image and Name stuf -->
         <div class="profile">
-            <img class="profile-avatar__image" ng-src="{%static images/evernote-logo.png %">
-            <span class="profile-avatar_name ">User</span>
+
+            <img class="profile-avatar__image" src="{% static 'notes/images/sample user profile.png' %}">
+        </div>
+        <div class="pa">
+            <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
+                <li>
+                    <a href="#">Sebastian</a>
+                    <ul class="menu vertical sublevel-1">
+                        <li>
+                            <a href="#">Settings</a>
+                        </li>
+                </li>
+                </ul>
+        </div>
+    </div>
+    <!--Left-Nav-->
+    <!-- <div class="left-nav ">
+        <ul class="side-nav " role="navigation ">
+            <li class="Click "><a href="# ">Option1</a></li>
+            <img class="profile-avatar__image" src="{% static 'notes/images/evernote-logo.png' %}">
+            <span class="profile-avatar_name "><a href=#>{{ user.username }}</a></span>
         </div>
     </div>
     <div class="left-nav ">
-        <ul class="side-nav " role="navigation ">
-            <li class="Click "><a href="# ">Option1</a></li>
+        <ul class="side-nav " role="navigation">
+            <li class="Click "><a href="/notes/login">Login</a></li>
+
             <li class="divider "></li>
-            <li class="Click "><a href="# ">Option2</a></li>
+            <li class="Click "><a href="/notes/logout">Logout</a></li>
             <li class="divider "></li>
-            <li class="Click "><a href="# ">Option3</a></li>
+            <li class="Click "><a href="/notes/signup">Sign Up</a></li>
             <li class="divider "></li>
-            <li class="Click "><a href="# ">Option4</a></li>
+            <li class="Click "><a href="{% url 'notes:note-create' %}">Create a Note</a></li>
             <li class="divider "></li>
             <li class="Click "><a href="# ">Option5</a></li>
-        </ul>
+</ul>
+    </div> -->
+    <!--Gird for dispalying-->
+    <div class="notes">
+        <div class="card-info success">
+            <div class="card-info-label">
+                <div class="card-info-label-text">
+                    Win!
+                </div>
+            </div>
+            <div class="card-info-content">
+                <h3 class="lead"> Mad Max: Fury Road</h3>
+                <p>In a post-apocalyptic world, in which people fight to the death, Max teams up with a mysterious woman, Furiousa, to try and survive.</p>
+            </div>
+        </div>
+
+        <div class="card-info primary">
+            <div class="card-info-label">
+                <div class="card-info-label-text">
+                    Blue
+                </div>
+            </div>
+            <div class="card-info-content">
+                <h3 class="lead">Star Wars: Episode VII - The Force Awakens</h3>
+                <p>A continuation of the saga created by George Lucas set thirty years after Star Wars: Episode VI - Return of the Jedi.</p>
+            </div>
+        </div>
+
+        <div class="card-info secondary">
+            <div class="card-info-label">
+                <div class="card-info-label-text">
+                    Deal
+                </div>
+            </div>
+            <div class="card-info-content">
+                <h3 class="lead">Terminator Genisys</h3>
+                <p>After finding himself in a new time-line, Kyle Reese teams up with John Connor's mother Sarah and an aging terminator to try and stop the one thing that the future fears, "Judgement Day".</p>
+            </div>
+        </div>
+
+        <div class="card-info info">
+            <div class="card-info-label">
+                <div class="card-info-label-text">
+                    FYI
+                </div>
+            </div>
+            <div class="card-info-content">
+                <h3 class="lead">Chappie</h3>
+                <p>In the near future, crime is patrolled by a mechanized police force. When one police droid, Chappie, is stolen and given new programming, he becomes the first robot with the ability to think and feel for himself.</p>
+            </div>
+        </div>
+
+        <div class="card-info alert">
+            <div class="card-info-label">
+                <div class="card-info-label-text">
+                    Stop
+                </div>
+            </div>
+            <div class="card-info-content">
+                <h3 class="lead"> Poltergeist</h3>
+                <p>A family's suburban home is invaded by evil forces.
+                </p>
+            </div>
+        </div>
+
+        <div class="card-info warning">
+            <div class="card-info-label">
+                <div class="card-info-label-text">
+                    Hey!
+                </div>
+            </div>
+            <div class="card-info-content">
+                <h3 class="lead">Jurassic World</h3>
+                <p>Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond. After 10 years of operation and visitor rates declining, in
+                    order to fulfill a corporate mandate, a new attraction is created to re-spark visitor's interest, which backfires horribly.
+                </p>
+            </div>
+        </div>
+
+        <div class="card-info">
+            <div class="card-info-label">
+                <div class="card-info-label-text">
+                    Yo!
+                </div>
+            </div>
+            <div class="card-info-content">
+                <h3 class="lead"> Avengers: Age of Ultron </h3>
+                <p>When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and it is up to the Avengers to stop the villainous Ultron from enacting his terrible plans.</p>
+            </div>
+        </div>
+
+        <div class="card-info alert">
+            <div class="card-info-label">
+                <div class="card-info-label-text">
+                    Sale
+                </div>
+            </div>
+            <div class="card-info-content">
+                <h3 class="lead"> Death Star</h3>
+                <img src="https://img2.wikia.nocookie.net/__cb20090309234126/starwars/images/e/ee/DeathStar2.jpg" alt="death star" />
+                <p>The Death Star was a moon-sized Imperial military battlestation armed with a planet-destroying superlaser.</p>
+            </div>
+        </div>
     </div>
-
-
+    <script src="{% static 'notes/js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'notes/js/vendor/what-input.js' %}"></script>
+    <script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
+    <script src="{% static 'notes/js/app.js' %}"></script>
     {% endblock %}
+        </div>
 </body>
 
 </html>

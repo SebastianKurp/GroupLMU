@@ -1,0 +1,22 @@
+<html>
+{% load custom_tags %}
+    <head>
+    <title>Search Results</title>
+    </head>
+    <body>
+        <p>You searched for: <b>{{ query }}</b></p>
+
+        {% if notes %}
+            <p>Found {{ count }} match(es).</p>
+            <ul>
+                {% for anote in notes %}
+                <a href="/notes/{{anote.id}}"><h2>{{ anote.title }}</h2></a>
+                <li>{{anote.content|get_note_contents}}</li>
+                <li>{% search_word anote query %}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No notes matched your search criteria.</p>
+        {% endif %}
+    </body>
+</html>

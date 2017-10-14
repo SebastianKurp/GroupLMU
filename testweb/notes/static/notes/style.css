@@ -80,9 +80,8 @@ align: relative;
 }
 
 .profile-avatar__image {
-    width: 4em;
-    height: 4em;
-    border-radius: 2em;
+    width: 3em;
+    height: 3em;
 }
 
 .profile-avatar_name {

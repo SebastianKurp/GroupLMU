@@ -1,0 +1,37 @@
+body {
+    background:url(http://stuffpoint.com/cats/image/98681-cats-jump.jpg);
+    background-size:100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.signUpCard{
+    position: relative;
+    padding: .85em;
+    width: fit-content;
+    background-color: #F7F7F7;
+    margin: auto;
+    border-radius: 1.1em;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background-color:lightgrey;
+    color:green;
+}
+
+.signUpCard h3{
+    text-align:center;
+    font-size:x-large;
+    color:green;
+}
+
+.form{
+    text-align:center;
+    display:inline-block;
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> pauls_branch

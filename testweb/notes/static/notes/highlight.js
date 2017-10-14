@@ -10,34 +10,23 @@ function getText(){
     text = text.trim();
     var length = text.length;
     sel = window.getSelection().getRangeAt(0);
-    textRange = window.getSelection().getRangeAt(0);//where to put the styling
+    textRange = sel.cloneRange();//where to put the styling
     parentNode = textRange.startContainer.parentNode.id;
 
+    if(length > 0 && text !="" && parentNode =="content"){//only highlights body of note
+        /*prevents offsets from referencing spans instead of the parent node*/
+        textRange.selectNodeContents(textRange.startContainer.parentNode);
+        textRange.setEnd(sel.startContainer, sel.startOffset);
+        startRange = textRange.toString().length;
+        endRange = startRange + sel.toString().length;
 
-
-
-    if(length > 0 && text !="" && parentNode =="content"){
-        startRange = textRange.startOffset;
-        endRange = textRange.endOffset;
-        if(sel.rangeCount && sel.getRangeAt){
-            textRange = sel.getRangeAt(0);
-        }
-
-        document.designMode = "on";
-
-
-
+        document.designMode = "on";//highlights stuff
         document.execCommand("BackColor", false,"#FFFF00");
-
-
         document.designMode = "off";
 
-
-        //unHighlight(); //currently don't know how to implement this
         deselect();
         console.log(startRange);
         console.log(endRange);
-
 
     }else{
         console.log(startRange);
@@ -46,7 +35,7 @@ function getText(){
     }
 }
 
-function newHighlight(){
+function highlight(){
     var range, sel;
 
     if(window.getSelection){
@@ -64,30 +53,6 @@ function newHighlight(){
 
 }
 
-function highlight(range){
-    var node = document.createElement("span");
-    node.setAttribute("style","background-color:yellow; display: inline;");
-    node.id = 'highlighted';
-    range.surroundContents(node);
-}
-
-
-
-/*function removeAllRanges(range){
-    if(range.rangeCount > 1){
-        for(var i = 1; i<range.rangeCount; i++){
-            range.removeRance(range.getRangeAt(i));
-        }
-    }
-}*/
-
-function unHighlight() {
-    var tag = document.getElementById('highlighted');
-    var content = document.getElementById('highlighted').textContent;
-    var node = document.createTextNode(content);
-    tag.parentNode.replaceChild(node,tag);
-}
-
 function deselect(){//deselects in browser to display the highlighting in yellow
      if ( document.selection ) {
         document.selection.empty();
@@ -97,6 +62,6 @@ function deselect(){//deselects in browser to display the highlighting in yellow
 }
 
 
-document.onmouseup = newHighlight;
+document.onmouseup = highlight;
 
 

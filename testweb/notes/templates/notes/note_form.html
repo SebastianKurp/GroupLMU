@@ -1,8 +1,13 @@
 {% include 'notes/creation_template.html' %}
 {% block form_title %} {% endblock %}
 {% load staticfiles %}
-
+<div id="nav">
+    <a href="/notes/logout">Logout</a><br><br>
+    <a href="/notes/">Back</a>
+</div>
+</form>
 {% block page %}
+<title>Create Note</title>
 <div class="login-card">
         <div class="login-body">
 
@@ -15,10 +20,6 @@
     </form>
         </div>
     </div>
-<div id="nav">
-    <a href="/notes/logout">Logout</a><br><br>
-    <a href="/notes/">Back</a>
-</div>
-</form>
+
 
 {% endblock %}

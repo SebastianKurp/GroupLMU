@@ -612,7 +612,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: #fefefe;
+    background: #219d46;
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: normal;
     line-height: 1.5;
@@ -3735,7 +3735,7 @@ screen and (min-width: 64rem) {
     text-align: center;
     cursor: pointer;
     background-color: #1779ba;
-    color: #fefefe;
+    color: #219d46;
 }
 
 [data-whatinput='mouse'] .button {
@@ -3745,7 +3745,7 @@ screen and (min-width: 64rem) {
 .button:hover,
 .button:focus {
     background-color: #14679e;
-    color: #fefefe;
+    color: #219d46;
 }
 
 .button.tiny {
@@ -3769,18 +3769,18 @@ screen and (min-width: 64rem) {
 
 .button.primary {
     background-color: #1779ba;
-    color: #fefefe;
+    color: #219d46;
 }
 
 .button.primary:hover,
 .button.primary:focus {
     background-color: #126195;
-    color: #fefefe;
+    color: #219d46;
 }
 
 .button.secondary {
     background-color: #767676;
-    color: #fefefe;
+    color: #219d46;
 }
 
 .button.secondary:hover,

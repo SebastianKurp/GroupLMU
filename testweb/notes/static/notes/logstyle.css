@@ -8,6 +8,19 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+button {
+    color: #d9fcd9;
+    font-size: 2rem;
+}
+
+button:hover{
+    color: #7daaf2;
+}
+
+#submit {
+    padding: 1em 10em 1em 11em;
+}
+
 .login-card {
     position: absolute;
     height: 100%;

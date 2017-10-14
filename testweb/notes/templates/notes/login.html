@@ -19,11 +19,14 @@
         <img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"/>
         <h2>Sign-in</h2><br>
 
-        <form>
-            <input type="text" name="user" placeholder="Username">
-            <input type="password" name="pass" placeholder="Password">
-            <input type="submit" name="login" class="login login-submit" value="Login">
-        </form>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}} <!--'As paragraph django method-->
+        <div id="submit">
+        <button type="submit">Login</button>
+            </div>
+    </form>
+
 
         <div class="login-help">
             <a href="{% url 'notes:signup' %}">Register</a>

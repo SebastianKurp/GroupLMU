@@ -110,9 +110,17 @@ def search_form(request):
 def search(request):
     if 'q' in request.GET:
         q = request.GET['q'] #store query in variable
+        print(type(q))
+        if q == '':
+            if 'symbol' in request.GET:
+                symbol = request.GET['symbol']
+                notes = note.objects.filter(content__icontains=symbol)
+                count = notes.count()
+                return render(request, 'notes/search_results.html', {'notes': notes, 'symbol': symbol, 'count': count})
         notes = note.objects.filter(content__icontains=q)
-        count = notes.count();
+        count = notes.count()
         return render(request, 'notes/search_results.html', {'notes':notes, 'query':q, 'count':count})
+
     else:
         message = "Fill out the form next time."
     return HttpResponse(message)

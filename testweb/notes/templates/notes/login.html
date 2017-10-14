@@ -14,7 +14,9 @@
 <body>
     {% block note_body %}
     <div class="login-card">
-        <img class="logo" src="{%static 'notes/images/evercat-logo.png' %}">
+        <div class="login-body">
+
+        <img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"/>
         <h2>Sign-in</h2><br>
 
         <form>
@@ -24,7 +26,9 @@
         </form>
 
         <div class="login-help">
-            <a href="{% templates 'notes/signup.html' %" }>Register</a>
+            <a href="{% url 'notes:signup' %}">Register</a>
+            </div>
+
         </div>
     </div>
     {% endblock %}

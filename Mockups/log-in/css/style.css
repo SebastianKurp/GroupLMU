@@ -59,7 +59,7 @@ input[type=password]:hover {
 
 .login {
     text-align: center;
-    font-size: 14px;
+    font-size: 20px;
     font-family: 'Arial', sans-serif;
     font-weight: 700;
     height: 36px;
@@ -88,7 +88,7 @@ input[type=password]:hover {
 
 .login-card a {
     text-decoration: none;
-    color: #666;
+    color: #d9fcd9;
     font-weight: 400;
     text-align: center;
     display: inline-block;
@@ -103,7 +103,7 @@ input[type=password]:hover {
 .login-help {
     width: 100%;
     text-align: center;
-    font-size: 12px;
+    font-size: 20px;
 }
 
 .inspire {

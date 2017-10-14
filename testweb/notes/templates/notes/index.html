@@ -10,7 +10,11 @@
     <ul>
         {% for note in user.note_set.all %}
         <!--stand django syntax. user (object) . note_set (object set) .all (method on that final object)-->
-        <li id="note_title"><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
+
+    <div class="notes">
+        <div class="card-info-content">
+            <div class="card-info-label">
+                <li id="note_title"><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
             <!--This links to the note-delete view/URL-->
             <form action="{% url 'notes:note-delete' note.id %}" method="post" style="display: inline;">
                 {% csrf_token %} <!--use everytime using form-->
@@ -28,8 +32,13 @@
                 </button>
             </form>
         </li>
-      <li id="note_contents">{{ note.content|get_note_contents }}</li>
-        <li>{% search_word note 'cats' %}</li>
+                <div class="card-info-label-text">
+                    <li id="note_contents">{{ note.content|get_note_contents }}</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
         <!--Maybe we could make this a magnifying glass which brings up a little modal/dialog of search
         options when you click it?-->

@@ -1,6 +1,7 @@
 {% include 'notes/base.html' %}
 {% load staticfiles %}
 {% load custom_tags %}
+<script src="{% static 'notes/form_handle.js' %}"></script>
 <!--Load path to static files-->
 {% block nav_bars %}
 {% endblock %}
@@ -29,11 +30,11 @@
         </li>
       <li id="note_contents">{{ note.content|get_note_contents }}</li>
         <li>{% search_word note 'cats' %}</li>
-        <li id="search_note"><a href=#>Search this note</a></li>
+
         <!--Maybe we could make this a magnifying glass which brings up a little modal/dialog of search
         options when you click it?-->
         {% endfor %}
-    </ul>
+
     {% else %}
     <p>You don't have any notes</p>
     {% endif %} <!--endif required in django for all if/else blocks-->

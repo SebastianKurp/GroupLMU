@@ -8,6 +8,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import authenticate, login
 from .forms import UserForm
+from django.http import HttpResponse
 
 
 class IndexView(generic.ListView):
@@ -102,3 +103,16 @@ class UserFormView(View):
             return render(request, 'notes/bad_form.html', {'form':form})
             #if they enter bad signup info, take them to a page that tells them so
 
+def search_form(request):
+    return render(request, 'notes/search-form.html')
+
+
+def search(request):
+    if 'q' in request.GET:
+        q = request.GET['q'] #store query in variable
+        notes = note.objects.filter(content__icontains=q)
+        count = notes.count();
+        return render(request, 'notes/search_results.html', {'notes':notes, 'query':q, 'count':count})
+    else:
+        message = "Fill out the form next time."
+    return HttpResponse(message)

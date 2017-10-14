@@ -27,6 +27,11 @@ urlpatterns = [
     # /notes/login
     url(r'^login/$', login, {'template_name': 'notes/login.html'}),
 
+    # /notes/search-form
+    url(r'^search-form/$', views.search_form),
+
+    # /notes/search
+    url(r'^search/$', views.search)
 
 ]
 

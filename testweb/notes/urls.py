@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
 
     # /notes/note/create
-    url(r'note/create/$', views.NoteCreate.as_view(), name='note-create'),
+    url(r'create/$', views.NoteCreate.as_view(), name='note-create'),
 
     # /notes/note/[primary key]
     url(r'note/(?P<pk>[0-9]+)/$', views.NoteUpdate.as_view(), name='note-update'),

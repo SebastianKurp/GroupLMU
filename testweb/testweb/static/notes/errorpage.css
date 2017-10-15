@@ -1,9 +1,0 @@
-img.errorimage {
-    display: block;
-    margin: 0 auto;
-}
-
-html {
-    background-color: black;
-    background-image: black url('images/white_blurry_bg.jpg');
-}

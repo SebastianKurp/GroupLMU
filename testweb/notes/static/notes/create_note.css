@@ -1,0 +1,32 @@
+body {
+    background: url('images/cat_typewriter.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+.login-card {
+    position: absolute;
+    height: 100%;
+    padding: 1em 10em 1em 25em;
+    width: 500px;
+ /*   margin: 400px auto 10px; */
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    vertical-align: left;
+   /* top: 17em; */
+}
+
+.login-body {
+    top: 17em;
+}
+
+#submit {
+    padding: 1em 10em 1em 11em;
+}
+
+a {
+    color: #d9fcd9;
+}

@@ -132,4 +132,4 @@ LOGIN_REDIRECT_URL = '/notes/'
 LOGOUT_REDIRECT_URL = '/notes/'
 #redirect to home
 
-AUTH_PROFILE_MODUKE = 'notes.UserProfile'
+AUTH_PROFILE_MODULE = 'notes.UserProfile'

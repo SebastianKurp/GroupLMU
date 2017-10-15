@@ -16,13 +16,15 @@
     <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
-                <li class="ClickNoPadding "><a href="/notes"><img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"></a></li>
-                <li class="Click "><a href="/notes/login">Login</a></li>
+                <li class="ClickNoPadding ">
+                    <a href="/notes"><img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"></a>
+                </li>
+                <!-- <li class="Click "><a href="/notes/login">Login</a></li>
                 <li class="divider "></li>
                 <li class="Click "><a href="/notes/logout">Logout</a></li>
                 <li class="divider "></li>
                 <li class="Click "><a href="/notes/signup">Sign Up</a></li>
-                <li class="divider "></li>
+                <li class="divider "></li> -->
                 <li class="Click "><a href="{% url 'notes:note-create' %}">Create a Note</a></li>
                 <li class="divider "></li>
                 <li class="Click "><a href="/notes/search-form">Search</a></li>
@@ -60,6 +62,7 @@
                     <ul class="menu vertical sublevel-1">
                         <li>
                             <a href="#">Settings</a>
+                            <a href="/notes/logout">Logout</a>
                         </li>
                 </li>
                 </ul>
@@ -72,7 +75,7 @@
     <script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
     <script src="{% static 'notes/js/app.js' %}"></script>
     {% endblock %}
-        </div>
+    </div>
 </body>
 
 </html>

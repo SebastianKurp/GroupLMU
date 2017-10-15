@@ -2,10 +2,13 @@
     background: white url('images/white_blurry_bg.jpg');
 } */
 
+
 /* Note listing */
+
 .notes {
-align: relative;
+    align: relative;
 }
+
 
 /*Nav bar stuff*/
 
@@ -29,7 +32,7 @@ align: relative;
     position: static;
 }
 
-#top-bar-left{
+#top-bar-left {
     background-color: 000000;
 }
 
@@ -40,24 +43,25 @@ align: relative;
 
 
 /* .animated-search-form[type=search] {
-    width: 10rem;
-    border: 0.125rem solid #e6e6e6;
-    box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
-    border-radius: 0;
-    background-image: url("//image.ibb.co/i7NbrQ/search_icon_15.png");
-    background-position: 0.625rem 0.625rem;
-    background-repeat: no-repeat;
-    padding: 0.75rem 1.25rem 0.75rem 2rem;
-    transition: width 0.4s ease-in-out;
-}
+        width: 10rem;
+        border: 0.125rem solid #e6e6e6;
+        box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
+        border-radius: 0;
+        background-image: url("//image.ibb.co/i7NbrQ/search_icon_15.png");
+        background-position: 0.625rem 0.625rem;
+        background-repeat: no-repeat;
+        padding: 0.75rem 1.25rem 0.75rem 2rem;
+        transition: width 0.4s ease-in-out;
+    }
+    
+    .animated-search-form[type=search]:focus {
+        width: 100%;
+    } */
 
-.animated-search-form[type=search]:focus {
-    width: 100%;
-} */
 
+/* 
 .top-bar input {
     max-width: 1200px;
-
 }
 
 [type='search'] {
@@ -72,10 +76,9 @@ align: relative;
 [type='search']:focus {
     background-color: transparent;
     border: transparent;
-}
+} */
 
 .button {
-
     height: 50px;
     width: 200px;
     background-color: #219d46;
@@ -86,11 +89,13 @@ align: relative;
 .profile-avatar__image {
     width: 3em;
     height: 3em;
+    position: relative;
+    top: 1.2em;
+    margin-right: .2em;
 }
 
 .profile-avatar_name {
     color: white;
-
     font-size: 20px;
     margin-right: 1em;
 }
@@ -107,10 +112,16 @@ align: relative;
     cursor: pointer;
     float: left;
     margin-right: 1em;
+    top: 1.2em;
     -webkit-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     -moz-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     -o-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+}
+
+.is-accordion-submenu-parent {
+    position: relative;
+    top: 1.5em;
 }
 
 .updates-button:hover {
@@ -209,16 +220,16 @@ h5 {
 
 
 /* .multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a.subitem::before {
-    content: "\f016";
-    font-family: FontAwesome;
-    margin-right: 1rem;
-}
-
-.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a::before {
-    content: "\f07c";
-    font-family: FontAwesome;
-    margin-right: 1rem;
-} */
+        content: "\f016";
+        font-family: FontAwesome;
+        margin-right: 1rem;
+    }
+    
+    .multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a::before {
+        content: "\f07c";
+        font-family: FontAwesome;
+        margin-right: 1rem;
+    } */
 
 .multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="false"] a::after {
     content: "\f0d7";
@@ -231,7 +242,6 @@ h5 {
 
 .left-nav {
     background-color: #131d28;
-
     width: 23em;
     text-align: center;
     height: 500em;
@@ -256,6 +266,8 @@ a {
     /* border-style: solid; */
     /* border-color: #ff0000 #0000ff; */
     padding: 25px;
+    position: relative;
+    top: .5em;
 }
 
 .ClickNoPadding {

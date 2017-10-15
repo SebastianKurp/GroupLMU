@@ -1,6 +1,5 @@
 {% load staticfiles %}
 {% block form_title %} {% endblock %}
-<link rel="stylesheet" type="text/css" href="{% static 'notes/create_note.css' %}" />
 {% for field in form %}
     <span class="error-in-note">
         {{field.errors}}

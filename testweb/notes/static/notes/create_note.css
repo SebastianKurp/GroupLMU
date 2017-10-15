@@ -9,7 +9,7 @@ body {
 .login-card {
     position: absolute;
     height: 100%;
-    padding: 1em 10em 1em 25em;
+    padding: 1em 10em 1em 23em;
     width: 500px;
  /*   margin: 400px auto 10px; */
     border-radius: 2px;
@@ -24,7 +24,7 @@ body {
 }
 
 #submit {
-    padding: 1em 10em 1em 11em;
+    padding: 1em 10em 1em 8em;
 }
 
 a {

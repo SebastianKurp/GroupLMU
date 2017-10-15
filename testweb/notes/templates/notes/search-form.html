@@ -1,6 +1,24 @@
-        <h3>Search Notes</h3>
+  {% include 'notes/creation_template.html' %}
+{% block form_title %} {% endblock %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'notes/create_note.css' %}" />
+<div id="nav">
+    <a href="/notes/logout">Logout</a><br><br>
+    <a href="/notes/">Back</a>
+</div>
+</form>
+{% block page %}
+<title>Search Notes</title>
+  <div class="login-card">
+        <div class="login-body">
        <form action="/search/" method="get">
-        <input type="text" name="q" placeholder="Search notes for keyword"><br>OR<br>
-           <label>Search by Symbol (ex: @, #, ^)</label><br><input type="text" name="symbol" placeholder="Search..."><br>
+        <label>Search by Keyword</label><br><input type="text" name="q" placeholder="Search for keyword"><br><br>
+           <label>Search by Symbol (ex: @, #, ^)</label><br><input type="text" name="symbol" placeholder="Search for mention"><br>
         <input type="submit" value="Search">
     </form>
+        </div>
+  </div>
+
+
+{% endblock %}

@@ -13,7 +13,7 @@ function getText(){
     textRange = sel.cloneRange();//where to put the styling
     parentNode = textRange.startContainer.parentNode.id;
 
-    if(length > 0 && text !="" && parentNode =="content"){//only highlights body of note
+    if(length > 0 && text !="" && parentNode =="note_content"){//only highlights body of note
         /*prevents offsets from referencing spans instead of the parent node*/
         textRange.selectNodeContents(textRange.startContainer.parentNode);
         textRange.setEnd(sel.startContainer, sel.startOffset);

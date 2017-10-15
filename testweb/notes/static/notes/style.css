@@ -258,6 +258,12 @@ a {
     padding: 25px;
 }
 
+.ClickNoPadding {
+    /* border-style: solid; */
+    /* border-color: #ff0000 #0000ff; */
+    padding: 0px;
+}
+
 
 /*note section*/
 

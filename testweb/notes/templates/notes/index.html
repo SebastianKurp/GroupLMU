@@ -14,7 +14,7 @@
     <div class="notes">
         <div class="card-info-content">
             <div class="card-info-label">
-                <li id="note_title"><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
+                <div id="note_title"><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
             <!--This links to the note-delete view/URL-->
             <form action="{% url 'notes:note-delete' note.id %}" method="post" style="display: inline;">
                 {% csrf_token %} <!--use everytime using form-->
@@ -31,7 +31,7 @@
                 <img src="{% static 'notes/images/edit.png' %}" width="45" />
                 </button>
             </form>
-        </li>
+        </div>
                 <div class="card-info-label-text">
                     <li id="note_contents">{{ note.content|get_note_contents }}</li>
                 </div>

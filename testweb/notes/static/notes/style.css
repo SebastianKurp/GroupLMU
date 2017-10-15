@@ -29,9 +29,13 @@ align: relative;
     position: static;
 }
 
+#top-bar-left{
+    background-color: 000000;
+}
+
 .top-bar,
 .top-bar ul {
-    background-color: #131d28;
+    background-color: #000000;
 }
 
 

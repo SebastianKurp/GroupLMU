@@ -1,6 +1,8 @@
 {% include 'notes/creation_template.html' %}
 {% block form_title %} {% endblock %}
 {% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'notes/create_note.css' %}" />
 <div id="nav">
     <a href="/notes/logout">Logout</a><br><br>
     <a href="/notes/">Back</a>

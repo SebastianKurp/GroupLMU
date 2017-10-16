@@ -124,3 +124,6 @@ def search(request):
     else:
         message = "Fill out the form next time."
     return HttpResponse(message)
+
+def settings(request):
+    return render(request, 'notes/settings.html')

@@ -16,6 +16,7 @@
     <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
+                <!--Top Nav Bar-->
                 <li class="ClickNoPadding "><a href="/notes"><img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"></a></li>
                 <li class="Click "><a href="/notes/login">Login</a></li>
                 <li class="divider "></li>
@@ -27,6 +28,12 @@
                 <li class="divider "></li>
                 <li class="Click "><a href="/notes/search-form">Search</a></li>
             </ul>
+        </div>
+        <!--link to badges-->
+        <div class="Alerts_button">
+            <button class="updates-button" data-open="trophies">
+                <a href="/notes/badges"><i class="fa fa-trophy trophy"></i></a>
+            </button>
         </div>
         <!--Profile Image and Name stuf -->
         <div class="profile">
@@ -63,9 +70,7 @@
     <title>Search Results</title>
     </head>
     <body>
-    {% if query %}
-        <p>You searched for: <b>{{ query }}</b></p>
-
+    <!--Highlights badges you have obtained -->
         {% if notes %}
             {% if count>10 %}
                 <div class="gridmodal">
@@ -98,8 +103,6 @@
         {% else %}
             <p>No notes</p>
         {% endif %}
-    {% endif %} <!--END OF 'if query' -->
-
     </body>
 </html>
 

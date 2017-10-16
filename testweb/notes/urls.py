@@ -34,7 +34,10 @@ urlpatterns = [
     url(r'^search/$', views.search),
 
     # /notes/settings
-    url(r'^settings/$', views.settings)
+    url(r'^settings/$', views.settings),
+
+    # /notes/badges
+    url(r'^badges/$', views.settings)
 ]
 
 

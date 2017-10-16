@@ -59,12 +59,25 @@
                     <a href=#>{{ user.username }}</a>
                     <ul class="menu vertical sublevel-1">
                         <li>
-                            <a href="/notes/settings">Settings</a>
+                            <a href="#">Settings</a>
                         </li>
+                    </ul>
                 </li>
                 </ul>
         </div>
     </div>
+
+<h1>Settings</h1>
+    <html>
+<body>
+
+<form action="/action_page.php">
+    <h3>Update your icon</h3>
+  <input type="file" name="pic" accept="image/*">
+  <input type="submit">
+</form>
+</body>
+</html>
 
     </div>
     <script src="{% static 'notes/js/vendor/jquery.js' %}"></script>
@@ -74,5 +87,3 @@
     {% endblock %}
         </div>
 </body>
-
-</html>

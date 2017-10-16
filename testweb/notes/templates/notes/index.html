@@ -20,7 +20,7 @@
                 {% csrf_token %} <!--use everytime using form-->
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
                 <button type="submit">
-                <img src="{% static 'notes/images/delete.png' %}" width="45" />
+                <img src="{% static 'notes/images/delete.png' %}" width="45" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Delete Note"/>
                 </button>
             </form>
             <!--This links to note-create view/URL-->
@@ -28,7 +28,7 @@
                 {% csrf_token %}
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
                 <button type="submit">
-                <img src="{% static 'notes/images/edit.png' %}" width="45" />
+                <img src="{% static 'notes/images/edit.png' %}" width="45" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Update Note"/>
                 </button>
             </form>
         </div>

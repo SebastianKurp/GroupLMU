@@ -16,7 +16,9 @@
     <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
-                <li class="ClickNoPadding "><a href="/notes"><img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"></a></li>
+                <li class="ClickNoPadding ">
+                    <a href="/notes"><img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"></a>
+                </li>
                 <li class="Click "><a href="/notes/login">Login</a></li>
                 <li class="divider "></li>
                 <li class="Click "><a href="/notes/logout">Logout</a></li>
@@ -72,52 +74,59 @@
 
 <html>
 {% load custom_tags %}
-    <head>
-    <title>Search Results</title>
-    </head>
-    <body>
-    {% if query %}
-        <p>You searched for: <b>{{ query }}</b></p>
 
-        {% if notes %}
-            <p>Found {{ count }} match(es).</p>
-            <ul>
-                {% for anote in notes %}
-                <a href="/notes/{{anote.id}}"><h2>{{ anote.title }}</h2></a>
-                <li>{{anote.content|get_note_contents}}</li>
-                <li>{% search_word anote query %}</li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No notes matched your search criteria.</p>
-        {% endif %}
-    {% endif %} <!--END OF 'if query' -->
+<head>
+    <title>Search Results</title>
+</head>
+
+<body>
+    {% if query %}
+    <p>You searched for: <b>{{ query }}</b></p>
+
+    {% if notes %}
+    <p>Found {{ count }} match(es).</p>
+    <ul>
+        {% for anote in notes %}
+        <a href="/notes/{{anote.id}}">
+            <h2>{{ anote.title }}</h2>
+        </a>
+        <li>{{anote.content|get_note_contents}}</li>
+        <li>{% search_word anote query %}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No notes matched your search criteria.</p>
+    {% endif %} {% endif %}
+    <!--END OF 'if query' -->
 
     {% if symbol %}
-        <p>You searched for: <b>{{ symbol }}</b></p>
+    <p>You searched for: <b>{{ symbol }}</b></p>
 
-        {% if notes %}
-            <p>Found {{ count }} match(es).</p>
-            <ul>
-                {% for anote in notes %}
-                <a href="/notes/{{anote.id}}"><h2>{{ anote.title }}</h2></a>
-                <li>{{anote.content|get_note_contents}}</li>
-                <li>{% symbol_search anote symbol %}</li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No notes matched your search criteria.</p>
-        {% endif %}
-    {% endif %} <!--END OF 'symbol query' -->
+    {% if notes %}
+    <p>Found {{ count }} match(es).</p>
+    <ul>
+        {% for anote in notes %}
+        <a href="/notes/{{anote.id}}">
+            <h2>{{ anote.title }}</h2>
+        </a>
+        <li>{{anote.content|get_note_contents}}</li>
+        <li>{% symbol_search anote symbol %}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No notes matched your search criteria.</p>
+    {% endif %} {% endif %}
+    <!--END OF 'symbol query' -->
 
-    </body>
+</body>
+
 </html>
 
-    </div>
-    <script src="{% static 'notes/js/vendor/jquery.js' %}"></script>
-    <script src="{% static 'notes/js/vendor/what-input.js' %}"></script>
-    <script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
-    <script src="{% static 'notes/js/app.js' %}"></script>
-    {% endblock %}
-        </div>
+</div>
+<script src="{% static 'notes/js/vendor/jquery.js' %}"></script>
+<script src="{% static 'notes/js/vendor/what-input.js' %}"></script>
+<script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
+<script src="{% static 'notes/js/app.js' %}"></script>
+{% endblock %}
+</div>
 </body>

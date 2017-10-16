@@ -54,3 +54,4 @@ workspace.xml
 tasks.xml
 misc.xml
 vcs.xml
+.idea

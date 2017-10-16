@@ -1,4 +1,3 @@
-
 function getText(){
     var text = "";
     var textRange,sel;
@@ -63,4 +62,3 @@ function deselect(){//deselects in browser to display the highlighting in yellow
 
 
 document.onmouseup = highlight;
-

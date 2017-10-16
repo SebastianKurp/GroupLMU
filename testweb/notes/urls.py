@@ -31,8 +31,10 @@ urlpatterns = [
     url(r'^search-form/$', views.search_form),
 
     # /notes/search
-    url(r'^search/$', views.search)
+    url(r'^search/$', views.search),
 
+    # /notes/settings
+    url(r'^settings/$', views.settings)
 ]
 
 

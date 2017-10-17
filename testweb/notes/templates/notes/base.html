@@ -34,7 +34,7 @@
         <!--link to badges-->
         <div class="Alerts_button">
             <button class="updates-button" data-open="trophies">
-                <a href="/notes/badges"><i class="fa fa-trophy trophy"></i></a>
+                <i class="fa fa-trophy trophy"></i>
             </button>
 
             <div class="reveal" id="trophies" data-reveal>
@@ -78,26 +78,16 @@
             <img class="profile-avatar__image" src="{% static 'notes/images/UserIcon.png' %}">
         </div>
         <div class="pa">
-            <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
-                <li>
                     <a href=#>{{ user.username }}</a>
-                    <ul class="menu vertical sublevel-1">
-                        <li>
-                            <a href="#">Settings</a>
-                        </li>
-                    </ul>
-                </li>
-                </ul>
         </div>
     </div>
-
-    </div>
+{% endblock %}
     <script src="{% static 'notes/js/vendor/jquery.js' %}"></script>
     <script src="{% static 'notes/js/vendor/what-input.js' %}"></script>
     <script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
     <script src="{% static 'notes/js/app.js' %}"></script>
-    {% endblock %}
-        </div>
+
+
 </body>
 
 </html>

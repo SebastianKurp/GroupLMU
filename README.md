@@ -12,8 +12,9 @@ To run:
     ensure python version installed (version 3 at least)
 
     To run project (Unix machine): 
-    Set up virtualenv (optional, but suggested). 
-    	1. Navigate to the GroupLMU/testweb directory
+    Set up virtualenv (optional, but suggested).
+	
+	1. Navigate to the GroupLMU/testweb directory
 	2. In terminal type:'virtualenv name-of-your-virtual-environment' (let's call it env)
 	3. Terminal: 'env/bin/pip install requests'
 	4. Terminal:'source env/bin/activate'
@@ -27,6 +28,12 @@ To run:
 		Ex: 127.0.0.1:8000/notes
 		
 For Windows users: Step 3 would be 'env\Scripts\activate.bat'
+
+**NOTE**: If you encounter error **PEP 263** this means your virtualenv was created in Python 2. Deactivate your virtualenv (Terminal: 'deactivate') and type the following commands:
+
+	1. virtualenv -p /usr/bin/python3 name-of-env (call it env3)
+	2. source env3/bin/activate
+	3. Follow steps 5 - 8 above
 
 The hosted version of this website can be found at http://evercat2.pdu95b9ven.us-east-2.elasticbeanstalk.com/
 

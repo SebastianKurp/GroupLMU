@@ -36,8 +36,6 @@ urlpatterns = [
     # /notes/settings
     url(r'^settings/$', views.settings),
 
-    # /notes/badges
-    url(r'^badges/$', views.settings)
 ]
 
 

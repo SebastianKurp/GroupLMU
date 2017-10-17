@@ -30,4 +30,4 @@ def formatLine(l, maxLen, index, term, lineNumber):
         #if the term can be centered and the line is too long, format
         line = '... ' + l[index - (maxLen - len(term)) // 2:index + len(term) + (maxLen - len(term)) // 2] + ' ...'
         loc = (maxLen + 8 - len(term)) // 2
-    return [term, line, lineNumber, loc, loc + len(term) - 1]
+    return [line]

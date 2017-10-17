@@ -18,8 +18,10 @@ def search_word(note, keyword):
     note_with_line_split = note.content+"\n"
     print(note_with_line_split)
     searchResults = search(note_with_line_split, note.title, keyword, 30)
-    print(searchResults)
-    return searchResults
+    if len(searchResults) == 0:
+        return "Unable to return exact instance of search result. Please click title for full contents."
+    else:
+        return searchResults[0][1] #first hit, 0th index is title
 
 @register.simple_tag(name="symbol_search")
 def symbol_search(note, symbol):

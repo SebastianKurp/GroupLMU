@@ -10,7 +10,7 @@ def search(fileContents, fileNames, term, maxOutputLen):
     # final output
     for i in range(len(fileNames)):
         # iterate through each file
-        currFile = [fileNames[i]]
+        currFile = [fileNames]
         # start building a result for the current file, starting with this file's name
         lines = fileContents.split('\n')
         print(str(lines))

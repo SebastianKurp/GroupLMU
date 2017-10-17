@@ -9,7 +9,7 @@
     <ul>
         {% for note in user.note_set.all %}
         <!--stand django syntax. user (object) . note_set (object set) .all (method on that final object)-->
-
+<!--note display file, delete and edit also here-->
     <div class="notes">
         <div class="card-info-content">
             <div class="card-info-label">
@@ -19,7 +19,7 @@
                 {% csrf_token %} <!--use everytime using form-->
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
                 <button type="submit">
-                <img src="{% static 'notes/images/delete.png' %}" width="45" />
+                    <a href=#><img src="{% static 'notes/images/delete.png' %}" width="45" /></a>
                 </button>
             </form>
             <!--This links to note-create view/URL-->
@@ -27,7 +27,7 @@
                 {% csrf_token %}
                 <input type="hidden" name="note_id" value="{{note.id}}"/>
                 <button type="submit">
-                <img src="{% static 'notes/images/edit.png' %}" width="45" />
+                    <a href=#><img src="{% static 'notes/images/edit.png' %}" width="45" /></a>
                 </button>
             </form>
         </li>

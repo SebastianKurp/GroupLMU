@@ -11,11 +11,14 @@
 
 </head>
 
+<!--generic homepage-->
+
 <body>
     {% block nav_bars %}
     <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
+                <!--Top Nav Bar-->
                 <li class="ClickNoPadding "><a href="/notes"><img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"></a></li>
                 <li class="Click "><a href="/notes/login">Login</a></li>
                 <li class="divider "></li>
@@ -28,11 +31,12 @@
                 <li class="Click "><a href="/notes/search-form">Search</a></li>
             </ul>
         </div>
-        <!--Badge area-->
+        <!--link to badges-->
         <div class="Alerts_button">
             <button class="updates-button" data-open="trophies">
-                <i class="fa fa-trophy trophy"></i>
+                <a href="/notes/badges"><i class="fa fa-trophy trophy"></i></a>
             </button>
+
             <div class="reveal" id="trophies" data-reveal>
                 <button class="close-button" data-close aria-label="Close modal" type="button">
                   <span aria-hidden="true">&times;</span>
@@ -67,6 +71,7 @@
                 </div>
 
             </div>
+
         </div>
         <!--Profile Image and Name stuf -->
         <div class="profile">
@@ -78,8 +83,9 @@
                     <a href=#>{{ user.username }}</a>
                     <ul class="menu vertical sublevel-1">
                         <li>
-                            <a href="/notes/settings">Settings</a>
+                            <a href="#">Settings</a>
                         </li>
+                    </ul>
                 </li>
                 </ul>
         </div>

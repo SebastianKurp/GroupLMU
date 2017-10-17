@@ -16,6 +16,7 @@
     <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
+                <!--Top Nav Bar-->
                 <li class="ClickNoPadding "><a href="/notes"><img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"></a></li>
                 <li class="Click "><a href="/notes/login">Login</a></li>
                 <li class="divider "></li>
@@ -28,26 +29,11 @@
                 <li class="Click "><a href="/notes/search-form">Search</a></li>
             </ul>
         </div>
-        <!--Badge area-->
+        <!--link to badges-->
         <div class="Alerts_button">
             <button class="updates-button" data-open="trophies">
-                <i class="fa fa-trophy trophy"></i>
+                <a href="/notes/badges"><i class="fa fa-trophy trophy"></i></a>
             </button>
-            <div class="reveal" id="trophies" data-reveal>
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <h5>Badges</h5>
-                <p>Green background means you have accquired this badge(will probably change this in the final)</p>
-                <p>Hover over the badge to see what you need to get the badge!</p>
-                <div class="gridmodal">
-                    <img class="badge" src="{%static 'notes/images/notes_bronze.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="10 Notes Saved">
-                    <img class="badge" src="{%static 'notes/images/notes_silver.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="25 Notes Saved">
-                    <img class="badge:ua" src="{%static 'notes/images/notes_gold.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="50 Notes Saved">
-                    <img class="badge:ua" src="{%static 'notes/images/notes_diamond.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="100 Notes Saved">
-                </div>
-
-            </div>
         </div>
         <!--Profile Image and Name stuf -->
         <div class="profile">
@@ -71,10 +57,14 @@
     <html>
 <body>
 
+update your icon
 <form action="/action_page.php">
-    <h3>Update your icon</h3>
-  <input type="file" name="pic" accept="image/*">
-  <input type="submit">
+    <h3>Update your icon</h3><br>
+    <h3>DOES NOT WORK</h3>
+    <form action='notes/images/UserIcon.png' method="post" enctype="multipart/form-data">
+        <input type="file" name="pic" accept="image/*">
+        <input type="submit">
+    </form>
 </form>
 </body>
 </html>

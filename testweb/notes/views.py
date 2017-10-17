@@ -127,3 +127,7 @@ def search(request):
 
 def settings(request):
     return render(request, 'notes/settings.html')
+
+def badges(request):
+        count = note.objects.count()
+        return render(request, 'notes/badges.html', {'count':count})

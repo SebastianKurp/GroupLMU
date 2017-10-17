@@ -38,13 +38,32 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
                 <h5>Badges</h5>
-                <p>Green background means you have accquired this badge(will probably change this in the final)</p>
+                <p>Hello {{user.username}}, you have {{ user.note_set.count}} notes!</p>
                 <p>Hover over the badge to see what you need to get the badge!</p>
                 <div class="gridmodal">
-                    <img class="badge" src="{%static 'notes/images/notes_bronze.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="10 Notes Saved">
-                    <img class="badge" src="{%static 'notes/images/notes_silver.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="25 Notes Saved">
-                    <img class="badge:ua" src="{%static 'notes/images/notes_gold.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="50 Notes Saved">
-                    <img class="badge:ua" src="{%static 'notes/images/notes_diamond.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="100 Notes Saved">
+                    {% if user.note_set.count >= 10 %}
+                    <img class="badge" src="{%static 'notes/images/notes_bronze.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" You saved 10 notes! ">
+                    {% else %}
+                    <img class="badge:ua" src="{%static 'notes/images/notes_bronze.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" Save 10 notes to get this badge! ">
+                    {% endif %}
+
+                    {% if user.note_set.count >= 25 %}
+                    <img class="badge" src="{%static 'notes/images/notes_silver.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" You saved 25 notes! ">
+                    {% else %}
+                    <img class="badge:ua" src="{%static 'notes/images/notes_silver.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" Save 25 notes to get this badge! ">
+                    {% endif %}
+
+                    {% if user.note_set.count >= 50 %}
+                    <img class="badge" src="{%static 'notes/images/notes_gold.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" You saved 50 notes! ">
+                    {% else %}
+                    <img class="badge:ua" src="{%static 'notes/images/notes_gold.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" Save 50 notes to get this badge! ">
+                    {% endif %}
+
+                    {% if user.note_set.count >= 100 %}
+                    <img class="badge" src="{%static 'notes/images/notes_diamond.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" You saved 100 notes! ">
+                    {% else %}
+                    <img class="badge:ua" src="{%static 'notes/images/notes_diamond.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" Save 100 notes to get this badge! ">
+                    {% endif %}
                 </div>
 
             </div>

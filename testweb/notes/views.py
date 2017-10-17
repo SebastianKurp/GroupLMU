@@ -52,7 +52,6 @@ class NoteUpdate(UpdateView):
         'content'
     ]
 
-
 class NoteDelete(DeleteView):
     model = note
     success_url = reverse_lazy('notes:index')

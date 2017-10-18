@@ -4,7 +4,7 @@ from django.shortcuts import render
 @login_required(login_url='/notes/login.html')
 def secure(request):
     user = request.user
-    return render(request, 'secure.html', {'email': user.email})
+    return render(request, base.html)
 
 
 
@@ -15,7 +15,5 @@ class SimpleTest(TestCase):
 
     def test_secure_page(self):
         self.client.login(username='temporary', password='temporary')
-        response = self.client.get('/manufacturers/', follow=True)
-        user = User.objects.get(username='temporary')
-        self.assertEqual(response.context['email'], 'temporary@gmail.com')
+        response = self.client.get('/users', follow=True)')
 

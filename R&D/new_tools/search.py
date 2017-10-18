@@ -13,7 +13,7 @@ def search(fileContents, fileNames, term, maxOutputLen, highlight = 'None'):
             tempFileContents = ''
             for j in range(len(highlight[i])):
                 #go through each highlighted region in that file
-                tempFileContents += fileContents[i][highlight[i][j][0]: highlight[i][j][1]+1] + '\n'
+                tempFileContents += fileContents[i][highlight[i][j][0]: highlight[i][j][1]] + '\n'
                 #add the highlighted region to the temporary string
             fileContents[i] = tempFileContents
             #replace the original content with only the highlighted regions

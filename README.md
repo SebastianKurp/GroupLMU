@@ -2,6 +2,8 @@
 
 This assignment allows the user to store several text files in memory and then search them for keywords or special characters.  In addition to this, users can write notes, highlight them, and store them for access anywhere, all from a new GUI.
 
+Latest version is from commit df04a9a, made 10/17
+
 To run:
 
     download git branch or other terminal

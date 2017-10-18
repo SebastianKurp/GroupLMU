@@ -1,6 +1,6 @@
-from new_tools.search import search
-from new_tools.report_by_symbol import reportBySymbol
-
+from search import *
+from report_by_symbol import *
+from topological_sort import *
 
 def showResult(info,result):
     print('\n>>>> ' + info + ' <<<<\n')
@@ -116,16 +116,40 @@ The voice of the other man in the room, querulously intruding upon his thoughts,
 "Yes. The natives imagine the leaves are reaching out and beckoning to you. They call it by this name--Ventomarme. Name means in English, 'Come and take me.'"
     """]
     fileNames = ["Cousin Tribulation's Story", "The Story of An Hour", "How the Camel Got His Hump", "The Cactus"]
-
-
-
-    searchResults = search(fileContents, fileNames, "you", 60)
+    highlights = 	[
+    					[
+    						[0,26],
+    						[100,200],
+    						[1000,1200],
+    					],
+    					[
+    						[500,900],
+    						[12,123],
+    						[1500,1700]
+    					],
+    					[
+    						[0,1000],
+    						[1200,1250]
+    					],
+    					[
+    						[0,100],
+    						[500,643],
+    						[1234,1345],
+    						[2000,2222]
+    					]
+    			 	]
+    searchResults = search(fileContents, fileNames, "when", 60)
+    searchResultsHighlight = search(fileContents, fileNames, "when", 60, highlight = highlights)
     mentionsByNote = reportBySymbol(fileContents, fileNames, '@', 60, style = 'by note')
     keywordsBySymbol = reportBySymbol(fileContents, fileNames, '#', style = 'by symbol')
+    sort = topologicalSort(fileContents, fileNames)
 
-    showResult('search results for [you]:',searchResults)
+
+    showResult('search results for [when]:',searchResults)
+    showResult('search results for [when] with highlights:',searchResultsHighlight)
     showResult('mentions found (by note):',mentionsByNote)
     showResult('keywords found (by symbol):',keywordsBySymbol)
+    showResult('Topological sort:',sort)
 
 main()
 

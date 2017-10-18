@@ -1,0 +1,42 @@
+<!DOCTYPE html> {% load staticfiles %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'notes/foundation.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/logstyle.css' %}" />
+    <title>Sign-In || EVERCAT </title>
+    {% block page_title %} {% endblock %}
+
+</head>
+
+<body>
+    {% block note_body %}
+    <div class="login-card">
+        <div class="login-body">
+
+        <img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"/>
+        <h2>Log In</h2><br>
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}} <!--'As paragraph django method-->
+        <div id="submit">
+            <a href="#"><button type="submit">Login</button></a>
+            </div>
+    </form>
+
+      <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
+
+
+        <div class="login-help">
+            <a href="{% url 'notes:signup' %}">Register</a>
+            </div>
+
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

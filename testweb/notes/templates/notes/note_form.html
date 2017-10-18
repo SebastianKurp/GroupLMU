@@ -1,0 +1,35 @@
+{% include 'notes/creation_template.html' %}
+{% block form_title %} {% endblock %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'notes/create_note.css' %}" />
+<div id="nav">
+    <a href="/notes/logout">Logout</a><br><br>
+    <a href="/notes/">Back</a>
+</div>
+</form>
+{% block page %}
+
+<!--form for creating new notes-->
+
+<title>Create Note</title>
+<div class="login-card">
+        <div class="login-body">
+{% if note %}
+
+<p>Current note title: {{note.title}} </p>
+    <p>Current note contents: {{note.content}}</p>
+{% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}} <!--'As paragraph django method-->
+        <div id="submit">
+        <button type="submit">Create Note</button>
+            </div>
+    </form>
+        </div>
+    </div>
+
+
+{% endblock %}

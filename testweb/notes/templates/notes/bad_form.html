@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<Head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/signup.css' %}" />
+
+</Head>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bad form entries</title>
+</head>
+
+<!--Tells user they already have an account-->
+{% block page %}
+<div class ="signUpCard">
+    <h3>Sign Up</h3>
+    <h5>Username Already Exists</h5>
+    <form class="form" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %} <!--Safety first!-->
+        {% for field in form %}
+<div class="form-group">
+<div class="form-column">
+    <label class="form-label">{{ field.label_tag}}</label>
+    <div class="form-input">{{ field }}</div>
+{% endfor %}
+                <button type="submit">Create account</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+{% endblock %}

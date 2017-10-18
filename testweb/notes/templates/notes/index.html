@@ -1,0 +1,49 @@
+{% include 'notes/base.html' %}
+{% load staticfiles %}
+{% load custom_tags %}
+<!--Load path to static files-->
+{% block nav_bars %}
+{% endblock %}
+{% block note_body %}
+    {% if user.note_set %}
+    <ul>
+        {% for note in user.note_set.all %}
+        <!--stand django syntax. user (object) . note_set (object set) .all (method on that final object)-->
+<!--note display file, delete and edit also here-->
+    <div class="notes">
+        <div class="card-info-content">
+            <div class="card-info-label">
+                <li id="note_title" style="display:inline-block"><a href="{% url 'notes:detail' note.id%}">{{note.title}}</a><br>
+            <!--This links to the note-delete view/URL-->
+            <form action="{% url 'notes:note-delete' note.id %}" method="post" style="display: inline;">
+                {% csrf_token %} <!--use everytime using form-->
+                <input type="hidden" name="note_id" value="{{note.id}}"/>
+                <button type="submit">
+                    <a href=#><img src="{% static 'notes/images/delete.png' %}" width="45" /></a>
+                </button>
+            </form>
+            <!--This links to note-create view/URL-->
+            <form action="{% url 'notes:note-update' note.id %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <input type="hidden" name="note_id" value="{{note.id}}"/>
+                <button type="submit">
+                    <a href=#><img src="{% static 'notes/images/edit.png' %}" width="45" /></a>
+                </button>
+            </form>
+        </li>
+                <div class="card-info-label-text">
+                    <li id="note_contents">{{ note.content|get_note_contents }}</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!--Maybe we could make this a magnifying glass which brings up a little modal/dialog of search
+        options when you click it?-->
+        {% endfor %}
+
+    {% else %}
+    <p>You must be logged in to see your notes </p>
+    {% endif %} <!--endif required in django for all if/else blocks-->
+{% endblock %}

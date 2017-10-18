@@ -1,0 +1,35 @@
+  {% include 'notes/creation_template.html' %}
+{% block form_title %} {% endblock %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'notes/create_note.css' %}" />
+  <style>
+  body{
+  background: url('https://i.imgur.com/TmEJczR.jpg') no-repeat center center fixed;
+  }
+  a {
+  color: 000000;
+  }
+
+</style>
+<div id="nav">
+    <a href="/notes/logout">Logout</a><br><br>
+    <a href="/notes/">Back</a>
+</div>
+</form>
+{% block page %}
+<title>Search Notes</title>
+  <div class="login-card">
+        <div class="login-body">
+       <form action="/search/" method="get">
+        <label>Search by Keyword</label><br><input type="text" name="q" placeholder="Search for keyword"><br><br>
+           <label>Search by Symbol (ex: @, #, ^)</label><br><input type="text" name="symbol" placeholder="Search for mention"><br>
+        <input type="submit" value="Search">
+        <input type="submit" value="Sort Topologically">
+
+    </form>
+        </div>
+  </div>
+
+
+{% endblock %}

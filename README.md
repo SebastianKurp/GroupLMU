@@ -38,6 +38,7 @@ For Windows users: Step 3 would be 'env\Scripts\activate.bat'
 	3. Follow steps 5 - 8 above
 
 The hosted version of this website can be found at http://evercat2.pdu95b9ven.us-east-2.elasticbeanstalk.com/
+**NOTE FOR SOCIAL AUTH**: The GitHub social auth feature only works on the hosted version of the website.
 
 A brief overview of how to use the web-cat-app can be found in the Wiki under 'Get Started'
 

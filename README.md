@@ -4,7 +4,9 @@ This assignment allows the user to store several text files in memory and then s
 
 Latest version is from commit af234bc, made 10/20
 
-To run:
+The hosted version of this website can be found at http://evercat2.pdu95b9ven.us-east-2.elasticbeanstalk.com/
+
+To run locally:
 
     download git branch or other terminal
 
@@ -36,8 +38,6 @@ For Windows users: Step 3 would be 'env\Scripts\activate.bat'
 	1. virtualenv -p /usr/bin/python3 name-of-env (call it env3)
 	2. source env3/bin/activate
 	3. Follow steps 5 - 8 above
-
-The hosted version of this website can be found at http://evercat2.pdu95b9ven.us-east-2.elasticbeanstalk.com/
 
 **NOTE FOR SOCIAL AUTH**: The GitHub social auth feature only works on the hosted version of the website.
 

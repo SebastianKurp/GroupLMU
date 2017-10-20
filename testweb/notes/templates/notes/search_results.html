@@ -1,0 +1,143 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'notes/foundation.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
+    <script src="{% static 'notes/highlight.js' %}"></script>
+
+</head>
+
+<!--generic homepage-->
+
+<body>
+    {% block nav_bars %}
+    <div class="top-bar" id="responsive-menu">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <!--Top Nav Bar-->
+                <li class="ClickNoPadding "><a href="/notes"><img class="logo" src="{%static 'notes/images/evercat-logo.png' %}"></a></li>
+                <li class="Click "><a href="/notes/login">Login</a></li>
+                <li class="divider "></li>
+                <li class="Click "><a href="/notes/logout">Logout</a></li>
+                <li class="divider "></li>
+                <li class="Click "><a href="/notes/signup">Sign Up</a></li>
+                <li class="divider "></li>
+                <li class="Click "><a href="{% url 'notes:note-create' %}">Create a Note</a></li>
+                <li class="divider "></li>
+                <li class="Click "><a href="/notes/search-form">Search</a></li>
+            </ul>
+        </div>
+        <!--link to badges-->
+        <div class="Alerts_button">
+            <button class="updates-button" data-open="trophies">
+                <i class="fa fa-trophy trophy"></i>
+            </button>
+
+            <div class="reveal" id="trophies" data-reveal>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5>Badges</h5>
+                <p>Hello {{user.username}}, you have {{ user.note_set.count}} notes!</p>
+                <p>Hover over the badge to see what you need to get the badge!</p>
+                <div class="gridmodal">
+                    {% if user.note_set.count >= 10 %}
+                    <img class="badge" src="{%static 'notes/images/notes_bronze.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" You saved 10 notes! ">
+                    {% else %}
+                    <img class="badge:ua" src="{%static 'notes/images/notes_bronze.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" Save 10 notes to get this badge! ">
+                    {% endif %}
+
+                    {% if user.note_set.count >= 25 %}
+                    <img class="badge" src="{%static 'notes/images/notes_silver.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" You saved 25 notes! ">
+                    {% else %}
+                    <img class="badge:ua" src="{%static 'notes/images/notes_silver.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" Save 25 notes to get this badge! ">
+                    {% endif %}
+
+                    {% if user.note_set.count >= 50 %}
+                    <img class="badge" src="{%static 'notes/images/notes_gold.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" You saved 50 notes! ">
+                    {% else %}
+                    <img class="badge:ua" src="{%static 'notes/images/notes_gold.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" Save 50 notes to get this badge! ">
+                    {% endif %}
+
+                    {% if user.note_set.count >= 100 %}
+                    <img class="badge" src="{%static 'notes/images/notes_diamond.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" You saved 100 notes! ">
+                    {% else %}
+                    <img class="badge:ua" src="{%static 'notes/images/notes_diamond.png' %}" span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title=" Save 100 notes to get this badge! ">
+                    {% endif %}
+                </div>
+
+            </div>
+
+        </div>
+        <!--Profile Image and Name stuf -->
+        <div class="profile">
+            <img class="profile-avatar__image" src="{% static 'notes/images/UserIcon.png' %}">
+        </div>
+        <div class="pa">
+                    <a href=#>{{ user.username }}</a>
+        </div>
+    </div>
+
+
+    <!--displays notes that match search-->
+
+{% load custom_tags %}
+    <head>
+    <title>Search Results</title>
+    </head>
+    <body>
+
+    {% if query %}
+        <p>You searched for: <b>{{ query }}</b></p>
+
+
+
+    <!--Search results for keywords-->
+        {% if notes %}
+            <p>Found {{ count }} match(es).</p>
+            <ul>
+                {% for anote in notes %}
+                <p>Published by {{anote.user.username}}</p>
+                <a href="/notes/{{anote.id}}"><h2>{{ anote.title }}</h2></a>
+                <li>{{anote.content|get_note_contents}}</li>
+                <li>{% search_word anote query %}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No notes matched your search criteria.</p>
+        {% endif %}
+    {% endif %} <!--END OF 'if query' -->
+
+    <!--Search results for mentions-->
+    {% if symbol %}
+        <p>You searched for: <b>{{ symbol }}</b></p>
+
+        {% if notes %}
+            <p>Found {{ count }} match(es).</p>
+            <ul>
+                {% for anote in notes %}
+                <a href="/notes/{{anote.id}}"><h2>{{ anote.title }}</h2></a>
+                <li>{{anote.content|get_note_contents}}</li>
+                <li>{% symbol_search anote symbol %}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No notes matched your search criteria.</p>
+        {% endif %}
+    {% endif %} <!--END OF 'symbol query' -->
+
+    </body>
+</html>
+
+    </div>
+    <script src="{% static 'notes/js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'notes/js/vendor/what-input.js' %}"></script>
+    <script src="{% static 'notes/js/vendor/foundation.js' %}"></script>
+    <script src="{% static 'notes/js/app.js' %}"></script>
+    {% endblock %}
+        </div>
+</body>

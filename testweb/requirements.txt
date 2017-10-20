@@ -1,0 +1,8 @@
+Django==1.11.5
+pytz==2017.2
+social-auth-app-django==1.2.0
+social-auth-core==1.4.0
+google-api-python-client==1.6.4
+requests-oauthlib==0.8.0
+oauth2client==4.1.2
+oauthlib==2.0.4

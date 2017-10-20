@@ -1,0 +1,20 @@
+{% include 'notes/base.html' %}
+
+<!--displays mentions in notes-->
+
+{% block note_body %}
+    <h1 id="note_title">{{note.title}}</h1>
+    <div id="note_content">{{note.content}}</div>
+    <p>{{note.title}} is a note. It has these mentions: </p>
+    <ul>
+        {%for mention in note.mention_set.all%}
+          {{mention.mention_name}}
+        {%endfor%}
+    </ul>
+
+    {% if error_msg %}
+        <p><b>{{error_msg}}</b></p>
+    {% endif %}
+
+{% endblock %}
+
